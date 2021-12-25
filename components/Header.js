@@ -54,6 +54,8 @@ const Logo = styled.div`
 
 const SearchContainer = styled.div`
     display: none;
+    margin-left: auto;
+    margin-right: 1rem;
 
     @media (min-width:801px) { 
         /* tablet, landscape iPad, lo-res laptops ands desktops */ 
