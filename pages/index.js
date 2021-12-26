@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
+import MainHomepage from '../components/MainHomepage'
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
       <Header />
       {/*Banner*/}
       <Banner />
-      {/*Header*/}
+      {/*Main*/}
+      <MainHomepage />
+
 
     </div>
   )

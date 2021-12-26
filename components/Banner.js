@@ -6,7 +6,7 @@ const Banner = () => {
         <BannerSection>
             <Container>
                 <TitleSection>
-                    Aprende a programar, diseñar y desarrollar aplicaciones
+                    Aprende a programar, diseñar y desarrollar aplicaciones... ¡Gratis!
                 </TitleSection>
                 <DescripcionSection>
                     En este sitio encontrarás cursos de programación, diseño y desarrollo web y mucho más
@@ -26,7 +26,7 @@ const BannerSection = styled.section`
     color: #fff;    
 
     @media (min-width:801px) { 
-        height: 80vh;
+        height: 90vh;
     }
     `
 
@@ -34,15 +34,19 @@ const Container = styled.div`
     width: 100%;
     vertical-align: middle;
     height: fit-content;
-    margin: 40% 0;
     padding: 0 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 25%;
+    
 
     @media (min-width:801px) { 
-        width: 720px;
-        margin: 15% auto;
+        width: 600px;
     }
     @media (min-width:1281px) {
-        margin: 12% auto;
+        //margin: % auto;
     }
 
     `
@@ -67,6 +71,7 @@ const DescripcionSection = styled.div`
     font-size: 1.3rem;
     text-align: center;
     margin-top: 1rem;
+    font-weight: 200;
     @media (min-width:600px) { 
         font-size: 1.5rem;
     }

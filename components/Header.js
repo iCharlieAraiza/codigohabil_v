@@ -25,9 +25,9 @@ const Header = () => {
                 <LoginBtn>
                     <span>Iniciar Sesión</span>
                 </LoginBtn>
-                <LoginBtn>
-                    <span>Registrarte</span>
-                </LoginBtn>
+                <SignUpBtn>
+                    <span>Registrarse</span>
+                </SignUpBtn>
             </MenuContainer>
             <MenuButton>
                 <MenuBtnIcon />
@@ -46,7 +46,7 @@ const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-self: center;
-    padding: 0 2rem;
+    padding: 0 1rem;
     background-color: ${css.colors.primary};
     color: #fff;
     position: fixed;
@@ -69,7 +69,7 @@ const SearchContainer = styled.div`
     margin-left: auto;
     margin-right: 1rem;
     width: 100%;
-    max-width: 250px;
+    max-width: 210px;
 
     @media (min-width:801px) { 
         /* tablet, landscape iPad, lo-res laptops ands desktops */ 
@@ -117,6 +117,22 @@ const MenuContainer = styled.div`
 `
 
 const LoginBtn = styled.div`
+    background-color: transparent;
+    padding: 5px 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    svg{
+        height: 25px;
+        margin-right: 5px;
+    }
+`
+
+const SignUpBtn = styled.div`
     background-color: transparent;
     padding: 5px 1rem;
     display: flex;
