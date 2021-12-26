@@ -41,14 +41,19 @@ const Container = styled.div`
         width: 720px;
         margin: 15% auto;
     }
+    @media (min-width:1281px) {
+        margin: 12% auto;
+    }
+
     `
 
 const TitleSection = styled.div`
     font-size: 2rem;
     text-align: center;
-    letter-spacing: 0.1rem;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: -2px;
+    font-weight: 700;
+    line-height: 45px;
     
     @media (min-width:600px) { 
         font-size: 2.5rem;
@@ -59,9 +64,12 @@ const TitleSection = styled.div`
     }
 `
 const DescripcionSection = styled.div`
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     margin-top: 1rem;
+    @media (min-width:600px) { 
+        font-size: 1.5rem;
+    }
 `
 
 export default Banner
