@@ -29,6 +29,7 @@ p{
 .container{
   margin: 0 auto;
   width: 100%;
+  padding: 0 1rem;
 }
 
 
@@ -37,11 +38,12 @@ p{
 @media (min-width:600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
 @media (min-width:801px) { 
   .container{
-    padding: 0 3rem;
+    padding: 0 1rem;
   }
  }
 @media (min-width:1025px) { 
   .container{
+    padding: 0 1rem;
     max-width: 1140px;
   }
 }

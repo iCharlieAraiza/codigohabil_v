@@ -1,15 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
+import Typewriter from 'typewriter-effect';
 
 const Banner = () => {
     return (
         <BannerSection>
             <Container>
                 <TitleSection>
-                    Aprende a programar, diseñar y desarrollar aplicaciones... ¡Gratis!
+                    Aprende a programar, diseñar y desarrollar 
+                    <Typewriter
+                        options={{
+                            strings: ['Apps', 'Software', 'en JavaScript', 'en React', 'en Node.js', 'en Python', 'en C++', 'en Java', 'en PHP'],
+                            autoStart: true,
+                            loop: true,
+                            delay: 100,
+                            pauseFor: 2500,
+                        }}
+                        />
                 </TitleSection>
                 <DescripcionSection>
-                    En este sitio encontrarás cursos de programación, diseño y desarrollo web y mucho más
+                    En este sitio encontrarás cursos de programación, diseño y desarrollo web y mucho más <OutstandingSpan>¡Gratis!</OutstandingSpan>
                 </DescripcionSection>
             </Container>
         </BannerSection>
@@ -41,6 +51,11 @@ const Container = styled.div`
     margin: 0 auto;
     top: 25%;
     
+    .Typewriter{
+        display: inline-block;
+        margin-left: 10px;
+        color: #f4f4c1;
+    }
 
     @media (min-width:801px) { 
         width: 600px;
@@ -50,6 +65,16 @@ const Container = styled.div`
     }
 
     `
+
+const OutstandingSpan = styled.span`
+    text-transform: capitalize;
+    color: #f4f4c1;
+    font-weight: 500;
+    background-color: #fff;
+    box-shadow: 10px 10px 0px 0px rgba(255,191,0,1);
+    padding-left: 10px;
+    padding-right: 10px;
+`
 
 const TitleSection = styled.div`
     font-size: 2rem;

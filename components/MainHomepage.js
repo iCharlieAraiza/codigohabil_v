@@ -49,7 +49,7 @@ const MainHomepage = () => {
                         <ImgContainer>
                             <img src="https://hackr.io/tutorials/c/logo-c.svg" alt="cursos-programacion" />
                         </ImgContainer>
-                        <CardTitle>React</CardTitle>
+                        <CardTitle>C</CardTitle>
                     </Card>
                     <Card/>
                     <Card/>
@@ -93,11 +93,12 @@ const Search = styled.input`
 `
 
 const Grid = styled.div`
-    margin: 2rem 0;
+    max-width: 1100px;;
+    margin: 3rem auto;
     display: grid;
-    gap: 1rem;
-    grid-auto-rows: 9rem;
-    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: 2rem;
+    grid-auto-rows: 8rem;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 `
 
 const Card = styled.div`
@@ -112,6 +113,7 @@ const Card = styled.div`
     cursor: pointer;
     &:hover {
         transform: scale(1.1);
+        color: #ffffff;
     }
 `
 
@@ -132,7 +134,7 @@ const CardTitle = styled.h3`
     text-align: center;
     font-size: 14px;
     color: #707070;
-    padding-bottom: 8px;
+    margin-top:10px;
 `
 
 

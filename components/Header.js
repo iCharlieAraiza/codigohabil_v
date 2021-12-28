@@ -51,6 +51,7 @@ const HeaderContainer = styled.header`
     color: #fff;
     position: fixed;
     width: 100%;
+    top: 0;
 `
 
 const Logo = styled.div`
