@@ -9,6 +9,8 @@ const CategorySection = () => {
         {   id: 1,  title: 'Fundamentos de java' },
         {   id: 2,  title: 'Fundamentos de java con dibujos' },
         {   id: 3,  title: 'Curso de actulización' },
+        {   id: 4,  title: 'Fundamentos de java con dibujos' },
+        {   id: 5,  title: 'Fundamentos de PHP con diagramas de flujo' },
     ]
 
     return (
@@ -19,24 +21,36 @@ const CategorySection = () => {
                     <h2>Contenido</h2>
                     <CaregoryTagList>
                         <TagItem>
+                            <ImgBlock>
+                                <img src="https://assets.codigohabil.com/img/book.svg" />
+                            </ImgBlock>
                             <TagTitle>
-                                Fundamentos de JavaSCript
+                                Fundamentos de JavaScript
                             </TagTitle>
                         </TagItem>
 
                         <TagItem>
+                            <ImgBlock>
+                                <img src="https://assets.codigohabil.com/img/book.svg" />
+                            </ImgBlock>
                             <TagTitle>
                                 Java y MySQL
                             </TagTitle>
                         </TagItem>
 
                         <TagItem>
+                            <ImgBlock>
+                                <img src="https://assets.codigohabil.com/img/gear.svg" />
+                            </ImgBlock>
                             <TagTitle>
                                 Programación Orientada a Objetos
                             </TagTitle>
                         </TagItem>
 
                         <TagItem>
+                            <ImgBlock>
+                                <img src="https://assets.codigohabil.com/img/pencil.svg" />
+                            </ImgBlock>
                             <TagTitle>
                                 Tutoriales y cursos
                             </TagTitle>
@@ -89,6 +103,10 @@ const Container = styled.div`
 `
 
 const CategoryTagContainer = styled.div`
+
+    //border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 1rem;
+
     h2{
         margin: 0;
         margin-bottom: 1rem;
@@ -102,13 +120,15 @@ const CaregoryTagList = styled.div`
 `
 
 const TagItem = styled.div`
+    display: flex;
+    align-items: center;
     ggrid-column: span 1;
 `
 
 const TagTitle = styled.a`
     color: #707070;
     font-size: 1rem;
-    background: #707070;
+    //background: #707070;
 `
 
 const PostSection = styled.div`
@@ -122,6 +142,7 @@ const SearchContainer = styled.div`
     border-radius: 5px;
     max-width: 720px;
     margin: 0 auto;
+    margin-bottom: 1rem;
 `
 const Search = styled.input`
     border: none;
@@ -142,6 +163,7 @@ const PostItem = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    flex: wrap;
     margin-bottom: 0px;
     &:hover{
         background: #f5f5f5;
@@ -155,7 +177,7 @@ const PostDescription = styled.div`
 `
 
 const PostTitle = styled.a`
-    font-size: 18px;
+    font-size: 1rem;
     color: #707070;
     font-weight: 600;
 `
@@ -177,9 +199,12 @@ const PostDate = styled.span`
 `
 
 const ImgBlock = styled.div`
-    width: 30px;
-    height: 30px;   
+    width: 25px;
+    height: 25px;   
     margin-right: 10px;
+    img{
+        max-width: 25px;
+    }
 `
 
 

@@ -14,7 +14,6 @@ const Header = () => {
 
     const handleClick = () => {
         setOpen(!open);
-        alert(open);
     }
 
     return (
@@ -39,14 +38,16 @@ const Header = () => {
 
                 {
                     open ? (
-                    <SearchWrapper> 
+                    <SearchWrapper className='width-animation'> 
                         <Search placeholder="Start your search" />
                         <AiOutlineClose onClick={handleClick} />
                     </SearchWrapper>) :
-                        (<SearchWrapper style={{opa}}> 
-                            <Search placeholder="Start your search" />
-                            <AiOutlineClose onClick={handleClick} />
-                        </SearchWrapper>) 
+                    (
+                    <SearchWrapper > 
+                        <Search placeholder="Start your search" />
+                        <AiOutlineClose onClick={handleClick} />
+                    </SearchWrapper>
+                    )
                 }
             </SearchContainer>
             <MenuContainer>
@@ -80,6 +81,17 @@ const HeaderContainer = styled.header`
     position: fixed;
     width: 100%;
     top: 0;
+
+    .width-animation {
+        transition: width 0.4s ease-in-out;
+        width:100%;
+        padding:2px 0.5rem;
+        visibility: visible;
+        svg{
+            display: block;
+        }
+    }
+
 `
 
 const Logo = styled.div`
@@ -104,12 +116,11 @@ const SearchActiveBtn = styled.div`
 
 
 const SearchContainer = styled.div`
-    //display: none;    
+    display: none;    
     margin-left: auto;
     margin-right: 1rem;
     width: 100%;
     max-width: 210px;
-
     @media (min-width:801px) { 
         /* tablet, landscape iPad, lo-res laptops ands desktops */ 
         display: flex;
@@ -120,15 +131,16 @@ const SearchContainer = styled.div`
 const SearchWrapper = styled.div`
     //display: none;  
     background: #fff;
-    width: 100%;
+    width: 0%;
     display: flex;
     border-radius: 14px;
     border: 1px solid #ccc;
-    padding:2px 0.5rem;
-    opacity: 0;
+    transition: 0.2s ease-in-out;
+    visibility: hidden;
     svg{
         height: 25px;
-        display: block;
+        //display: block;
+        display: none;
         width: 26px;
         background: #b6b6b6;
         border-radius: 50%;
@@ -149,7 +161,6 @@ const Search = styled.input`
 
 const MenuContainer = styled.div`
     display: none;
-
     @media (min-width:801px) { 
         /* tablet, landscape iPad, lo-res laptops ands desktops */ 
         display: flex;
@@ -203,7 +214,7 @@ const MenuButton = styled.div`
 `
     //color: white;
 const MenuBtnIcon = styled(GoThreeBars)`
-
 `
 
 export default Header
+

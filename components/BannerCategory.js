@@ -45,6 +45,7 @@ const TitleHeader = styled.div`
 
 const Introduction = styled.div`
     color: #939393;
+    font-weight: 100;
 `
 const ImgContainer = styled.div`
     height: 40px;
