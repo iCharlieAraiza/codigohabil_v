@@ -68,12 +68,12 @@ const Container = styled.div`
 
 const OutstandingSpan = styled.span`
     text-transform: capitalize;
-    color: #f4f4c1;
-    font-weight: 500;
-    background-color: #fff;
-    box-shadow: 10px 10px 0px 0px rgba(255,191,0,1);
+    color: #939393;
+    background-color: #f6f6f6;
+    box-shadow: 10px 10px 0px 0px rgb(57 57 57);
     padding-left: 10px;
     padding-right: 10px;
+    font-size: 20px;
 `
 
 const TitleSection = styled.div`

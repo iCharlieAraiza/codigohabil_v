@@ -4,8 +4,19 @@ import css from '../styles/styles.js'
 
 import { BiSearch } from 'react-icons/bi';
 import {GoThreeBars} from 'react-icons/go';
+import {AiOutlineClose} from 'react-icons/ai';
+import { useState } from 'react';
+
 
 const Header = () => {
+
+    const [open, setOpen] = useState(false);
+
+    const handleClick = () => {
+        setOpen(!open);
+        alert(open);
+    }
+
     return (
         <HeaderContainer>
             <Space />
@@ -15,11 +26,28 @@ const Header = () => {
                     src="https://assets.codigohabil.com/img/logo.png"
                     objectPosition="left" alt="logo" />
             </Logo>
+
+
             <SearchContainer>
-                <SearchWrapper>
-                    <Search placeholder="Start your search" />
-                    <BiSearch />
-                </SearchWrapper>
+                {
+                    !open ? (
+                        <SearchActiveBtn onClick={handleClick}>
+                            <BiSearch />
+                        </SearchActiveBtn>
+                    ) : ''
+                }
+
+                {
+                    open ? (
+                    <SearchWrapper> 
+                        <Search placeholder="Start your search" />
+                        <AiOutlineClose onClick={handleClick} />
+                    </SearchWrapper>) :
+                        (<SearchWrapper style={{opa}}> 
+                            <Search placeholder="Start your search" />
+                            <AiOutlineClose onClick={handleClick} />
+                        </SearchWrapper>) 
+                }
             </SearchContainer>
             <MenuContainer>
                 <LoginBtn>
@@ -65,8 +93,18 @@ const Logo = styled.div`
     }
 `
 
+const SearchActiveBtn = styled.div`
+    display: block; 
+    margin-left: auto;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+`
+
+
+
 const SearchContainer = styled.div`
-    display: none;    
+    //display: none;    
     margin-left: auto;
     margin-right: 1rem;
     width: 100%;
@@ -80,12 +118,14 @@ const SearchContainer = styled.div`
     }
 `
 const SearchWrapper = styled.div`
+    //display: none;  
     background: #fff;
     width: 100%;
     display: flex;
     border-radius: 14px;
     border: 1px solid #ccc;
     padding:2px 0.5rem;
+    opacity: 0;
     svg{
         height: 25px;
         display: block;
