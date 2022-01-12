@@ -19,6 +19,9 @@ h1,h2,h3,h4,h5{
 
 p{
   font-family: 'IBM Plex Serif', serif;
+  line-height: 32px;
+  font-size: 18px;
+  color: rgba(41, 41, 41, 1);
 }
 
 * {

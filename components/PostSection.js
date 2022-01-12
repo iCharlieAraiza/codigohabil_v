@@ -26,9 +26,41 @@ const PostSection = () => {
                 </PostInfo>
             </PostHeaderContainer>
 
-            <p>MVC is short for Model, View, and Controller. MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
+            <p><b>MVC is short for Model, View, and Controller.</b> MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
             <p>MVC is a way to organize your code’s core functions into their own, neatly organized boxes. This makes thinking about your app, revisiting your app, and sharing your app with others much easier and cleaner. lkas dlka slkd aslkd lkas dkla slkd akls dlka sldsadask aslkd alks </p>
+           
             <Separator />
+
+            <FeatureContent>
+                <FeatureTitle>
+                    Important to know
+                </FeatureTitle>
+                <FeatureList>
+                    <li>New element like how you make Thanksgiving dinner. You have const [.] = arrayToDestruct</li>
+                    <li>MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app</li>
+                </FeatureList>
+            </FeatureContent>
+
+            <h2>Create new function</h2>
+            <p>MVC is short for Model, View, <b>and Controller. MVC is a popular</b> way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
+            <p>It’s kind of like how you make <a href='/'>Thanksgiving dinner. You have a fridge </a>full of food, which is like the Model. The fridge (Model) contains the raw materials we will use to make dinner.</p>
+
+            <h3>Background</h3>
+            <p>MVC is short for Model, View, and Controller. MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
+            <p>It’s kind of like how you make Thanksgiving dinner. You have a fridge full of food, which is like the Model. The fridge (Model) contains the raw materials we will use to make dinner.</p>
+            <p>Then, you have table-settings, silverware, etc., which are what your hungry friends and family use to eat dinner. Table-top items are like the View. They let your guests interact with your Model and Controller’s creation.</p>
+
+            <Separator />
+
+            <h2>Create new function</h2>
+            <p>MVC is short for Model, View, and Controller. MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
+            <p>It’s kind of like how you make Thanksgiving dinner. You have a fridge full of food, which is like the Model. The fridge (Model) contains the raw materials we will use to make dinner.</p>
+
+            <h3>Background</h3>
+            <p>MVC is short for Model, View, and Controller. MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
+            <p>It’s kind of like how you make Thanksgiving dinner. You have a fridge full of food, which is like the Model. The fridge (Model) contains the raw materials we will use to make dinner.</p>
+            <p>Then, you have table-settings, silverware, etc., which are what your hungry friends and family use to eat dinner. Table-top items are like the View. They let your guests interact with your Model and Controller’s creation.</p>
+
         </Post>
     )
 }
@@ -36,6 +68,31 @@ const PostSection = () => {
 const Post = styled.article`
     background: #fff;
     margin-top: 1rem;
+
+    a{
+        color: #b1a257
+    }
+
+    li{
+        font-family: 'IBM Plex Serif', serif;
+        line-height: 32px;
+        font-size: 18px;
+        color: rgba(41, 41, 41, 1);
+    }
+
+    h2, h3, h4{
+        margin: 0;
+        margin-top: 2rem;
+    }
+
+    h2{
+        font-size: 1.8em;
+    }
+
+    h3{
+        font-size: 1.4rem;
+    }
+
     @media (min-width:600px) { 
         /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
         margin-top: 3rem;
@@ -87,11 +144,14 @@ const ProfileImg = styled.div`
 const PostHeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
 `
 
 const PostInfo = styled.p`
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     font-size: 14px;
     color: #b1a257;
     font-family: 'Open Sans',sans-serif;
@@ -103,7 +163,9 @@ const PostInfo = styled.p`
 
 const Separator = styled.div`
     border-top: 2px solid #e6e6e6;
-    margin: 3rem 0;
+    //margin: 3rem 0;
+    margin: 4rem 0;
+    margin-bottom: 3rem;
 `
 
 const Author = styled.span`
@@ -122,5 +184,24 @@ const ReadTime = styled.span`
         color: gray;
     }
 `
+
+const FeatureContent = styled.div`
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border: 1px solid #D3D3D3;
+    box-shadow: 5px 5px 0 0 rgb(28 172 189 / 50%);
+    width: calc(100% - 5px);
+    padding: 1rem;
+`
+const FeatureTitle = styled.h2`
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 1rem;
+`
+const FeatureList = styled.ul`
+    `
 
 export default PostSection
