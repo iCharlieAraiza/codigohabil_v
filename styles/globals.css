@@ -19,9 +19,14 @@ h1,h2,h3,h4,h5{
 
 p{
   font-family: 'IBM Plex Serif', serif;
-  line-height: 32px;
   font-size: 18px;
-  color: rgba(41, 41, 41, 1);
+  color: rgb(58, 61, 61);
+  letter-spacing: 0.2px;
+  line-height: 1.7;
+}
+
+.post img{
+  max-width: 100%;
 }
 
 * {
@@ -38,6 +43,7 @@ p{
 .container-post{
   max-width: 800px;
 }
+
 
 @media (min-width:320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
 @media (min-width:480px) { /* smartphones, Android phones, landscape iPhone */ }

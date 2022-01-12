@@ -1,23 +1,26 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Header from '../components/Header'
 import PostSection from '../components/PostSection'
 import styled from 'styled-components'
 
+
 const Post = () => {
+
     return (
         <Main>
             <Header />
-
             <Sidebar>
                 <h2>sdlaksjdklasdkl</h2>
                 askdlaksdlk
                 ñlsakdlkasñl
             </Sidebar>
-
-            <PostSection />
+            <link rel="stylesheet" href="https://assets.codigohabil.com/css/prism.css"></link>
+            <PostSection />   
+            <script src="https://assets.codigohabil.com/js/prism.js"></script>
         </Main>
     )
 }
+
 
 const Main = styled.main`
     padding-top:3rem;

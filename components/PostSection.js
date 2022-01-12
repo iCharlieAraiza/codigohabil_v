@@ -6,7 +6,7 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 
 const PostSection = () => {
     return (
-        <Post className='container-post'>        
+        <Post className='container-post post'>        
             <IconTitle>☕️</IconTitle>
             <Title>Nuevo post lkdasdk mvc whit the change element</Title>
             <SubTitle>App organization explained</SubTitle>
@@ -31,6 +31,7 @@ const PostSection = () => {
            
             <Separator />
 
+            <h2>Create new function</h2>
             <FeatureContent>
                 <FeatureTitle>
                     Important to know
@@ -40,8 +41,6 @@ const PostSection = () => {
                     <li>MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app</li>
                 </FeatureList>
             </FeatureContent>
-
-            <h2>Create new function</h2>
             <p>MVC is short for Model, View, <b>and Controller. MVC is a popular</b> way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
             <p>It’s kind of like how you make <a href='/'>Thanksgiving dinner. You have a fridge </a>full of food, which is like the Model. The fridge (Model) contains the raw materials we will use to make dinner.</p>
 
@@ -50,9 +49,17 @@ const PostSection = () => {
             <p>It’s kind of like how you make Thanksgiving dinner. You have a fridge full of food, which is like the Model. The fridge (Model) contains the raw materials we will use to make dinner.</p>
             <p>Then, you have table-settings, silverware, etc., which are what your hungry friends and family use to eat dinner. Table-top items are like the View. They let your guests interact with your Model and Controller’s creation.</p>
 
+            <pre>
+                <code className='language-java'>
+                    System.out.println("Hello workld");{<br/>}
+                    System.out.println("Hello workld");
+                </code>
+            </pre>
+
             <Separator />
 
             <h2>Create new function</h2>
+            <img src="https://miro.medium.com/max/1400/1*yUgoCAvFMatPAKWT5yUcnA.jpeg" alt="logo" />
             <p>MVC is short for Model, View, and Controller. MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
             <p>It’s kind of like how you make Thanksgiving dinner. You have a fridge full of food, which is like the Model. The fridge (Model) contains the raw materials we will use to make dinner.</p>
 
@@ -60,6 +67,12 @@ const PostSection = () => {
             <p>MVC is short for Model, View, and Controller. MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
             <p>It’s kind of like how you make Thanksgiving dinner. You have a fridge full of food, which is like the Model. The fridge (Model) contains the raw materials we will use to make dinner.</p>
             <p>Then, you have table-settings, silverware, etc., which are what your hungry friends and family use to eat dinner. Table-top items are like the View. They let your guests interact with your Model and Controller’s creation.</p>
+
+            <ul>
+                <li>New option for elment</li>
+                <li>short for Model, View, and</li>
+                <li>Content for it</li>
+            </ul>
 
         </Post>
     )
@@ -146,6 +159,7 @@ const PostHeaderContainer = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 1rem;
+    margin-bottom: 2rem;
 `
 
 const PostInfo = styled.p`
@@ -188,20 +202,24 @@ const ReadTime = styled.span`
 const FeatureContent = styled.div`
     margin-top: 2rem;
     margin-bottom: 2rem;
-    background-color: #fff;
+    background-color: #f9f9f9;
     border: 1px solid #D3D3D3;
-    box-shadow: 5px 5px 0 0 rgb(28 172 189 / 50%);
+    box-shadow: 10px 10px 0 0 rgb(114 130 149 / 80%);
     width: calc(100% - 5px);
     padding: 1rem;
 `
-const FeatureTitle = styled.h2`
-    font-size: 1.8rem;
+const FeatureTitle = styled.h3`
+    color: #525252;
     margin: 0;
     font-weight: 700;
     line-height: 1.2;
-    margin: 1rem;
+    margin: 1rem!important;
+    font-size: 1.5rem;
 `
 const FeatureList = styled.ul`
+    li::marker{
+        color: #b1a257;
+    }
     `
 
 export default PostSection
