@@ -4,10 +4,7 @@ import styled from 'styled-components'
 const BannerCategory = () => {
     return (
         <BannerSection>
-            <Container className="container">
-                <Introduction>
-                    Temas relacionados con
-                </Introduction>
+            <Container className="container-narrow">
                 <TitleHeader>
                     <ImgContainer>
                         <img src="https://hackr.io/tutorials/javascript/logo-javascript.svg" alt="cursos-programacion" />
@@ -42,11 +39,6 @@ const TitleHeader = styled.div`
     flex-wrap: wrap;
     margin: 6px 0;
 `
-
-const Introduction = styled.div`
-    color: #939393;
-    font-weight: 100;
-`
 const ImgContainer = styled.div`
     height: 40px;
     margin-right: 1rem;
@@ -59,9 +51,11 @@ const ImgContainer = styled.div`
 const Title = styled.h1`
     margin: 0;
     font-size: 1.8rem;
+    color: #343434;
 `
 
 const Description = styled.div`
+    color: #a1a1a1;;
 `
 
 export default BannerCategory

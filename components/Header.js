@@ -81,7 +81,8 @@ const HeaderContainer = styled.header`
     position: fixed;
     width: 100%;
     top: 0;
-
+    z-index: 10;
+    
     .width-animation {
         transition: width 0.4s ease-in-out;
         width:100%;
@@ -91,7 +92,6 @@ const HeaderContainer = styled.header`
             display: block;
         }
     }
-
 `
 
 const Logo = styled.div`
