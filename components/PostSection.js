@@ -61,7 +61,7 @@ const PostSection = () => {
             <h2>Create new function</h2>
             <img src="https://miro.medium.com/max/1400/1*yUgoCAvFMatPAKWT5yUcnA.jpeg" alt="logo" />
             <p>MVC is short for Model, View, and Controller. MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
-            <p>It’s kind of like how you make Thanksgiving dinner. You have a fridge full of food, which is like the Model. The fridge (Model) contains the raw materials we will use to make dinner.</p>
+            <p>It’s kind of like how you make <code>.nacv-sidebar-hero</code> Thanksgiving dinner. You have a fridge full of food, which is like the Model. The fridge (Model) contains the raw materials we will use to make dinner.</p>
 
             <h3>Background</h3>
             <p>MVC is short for Model, View, and Controller. MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
@@ -74,6 +74,48 @@ const PostSection = () => {
                 <li>Content for it</li>
             </ul>
 
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Carlos Araiza</td>
+                        <td>20</td>
+                        <td>Colombia</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Araiza</td>
+                        <td>20</td>
+                        <td>Colombia</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <Separator />
+
+            <h2>Cuestionario</h2>
+
+            <p>What is correct?</p>
+            <div className='question-container'>
+                <input type='radio' name='questionary' id='a'/>
+                <label for="a">It works well</label>
+            </div>
+
+            <div className='question-container'>
+                <input type='radio' name='questionary' id='b'/>
+                <label for="b">It doesn't work well</label>  
+            </div>
+
+            <div className='question-container'>
+                <input type='radio' name='questionary' id='c'/>
+                <label for="c">It doesn't work at all</label>
+            </div>
+
         </Post>
     )
 }
@@ -81,12 +123,13 @@ const PostSection = () => {
 const Post = styled.article`
     background: #fff;
     margin-top: 1rem;
+    padding-bottom: 2rem;
 
     a{
         color: #b1a257
     }
 
-    li{
+    label, li{
         font-family: 'IBM Plex Serif', serif;
         line-height: 32px;
         font-size: 18px;
@@ -94,16 +137,68 @@ const Post = styled.article`
     }
 
     h2, h3, h4{
+        color: #2e2e2e;
         margin: 0;
         margin-top: 2rem;
+        margin-bottom: 1rem;
     }
 
     h2{
         font-size: 1.8em;
+        &::before {
+            content: "§. ";
+            color: #8b8b8b;
+        }
+    }
+
+    tr{
+        border-bottom: rgb(241, 242, 243) 1px solid;
     }
 
     h3{
         font-size: 1.4rem;
+    }
+
+    table{
+        border: 1px solid #f1f2f3;
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        border-collapse: collapse;
+    }
+
+    thead {
+        display: table-header-group;
+        vertical-align: middle;
+        border-color: inherit;
+        border-bottom: rgb(241, 242, 243) solid 1px;
+    }
+
+    .table thead th {
+        border-bottom: 1px solid #eaeff4;
+    }
+
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+
+    th, td {
+        border-top: 0;
+        font-weight: 400;
+        padding: 0.75rem;
+    }
+
+    th{
+        font-weight: 700;
+        color: #3c3c3c;
+        font-size: 16px;
+    }
+
+    .question-container{
+        color: #57585f;
+        margin-bottom: 1rem;
     }
 
     @media (min-width:600px) { 
@@ -136,6 +231,7 @@ const Title = styled.h1`
     margin: 0;
     font-weight: 700;
     line-height: 1.2;
+    color: #2e2e2e;
     @media (min-width:600px) { 
         /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
         font-size: 2.75rem;
