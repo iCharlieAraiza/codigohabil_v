@@ -4,8 +4,18 @@ import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 import MainHomepage from '../components/MainHomepage'
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql
+} from "@apollo/client";
 
-export default function Home() {
+
+export default function Home({ posts }) {
+  console.log(posts)
+
   return (
     <div>
       <Head>
@@ -24,4 +34,39 @@ export default function Home() {
 
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const client = new ApolloClient({
+    uri: "https://wp.codigohabil.com/graphql",
+    cache: new InMemoryCache()
+  });
+
+  const response = await client
+    .query({
+      query: gql`
+        query MyQuery {
+          posts {
+            edges {
+              node {
+                title
+                uri
+                excerpt
+                content
+              }
+            }
+          }
+        }
+      `
+  })
+
+  const posts = response.data.posts.edges.map( ({ node }) => node);
+
+  console.log(posts)
+  return {
+    props: {
+      posts
+    }
+  }
+
 }
