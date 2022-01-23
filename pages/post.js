@@ -2,17 +2,61 @@ import React, {useEffect} from 'react'
 import Header from '../components/Header'
 import PostSection from '../components/PostSection'
 import styled from 'styled-components'
+import { unified } from 'unified'
+import rehypeParse from 'rehype-parse/lib'
+import rehypeStringify from 'rehype-stringify/lib'
+import { visit } from 'unist-util-visit'
+import parameterize from 'parameterize'
+import Link from 'next/link'
 
+/*
+    Todo: 
+    [] - Fix TOC styling
+    [] - Complete TOC functionality
+*/
 
 const Post = ({post}) => {
+    const toc = [];
 
+    const content = unified()
+        .use(rehypeParse, { fragment: true })
+        .use(() => {
+            return (tree) => {
+                visit(tree, 'element', (node) => {
+                    if (node.tagName === 'h2') {
+                        const id = parameterize(node.children[0].value)
+                        node.properties.id = id
+                        toc.push({
+                            id,
+                            title: node.children[0].value
+                        })
+                    }
+                } )
+                console.log(tree);
+                }
+            })
+            .use(rehypeStringify)
+            .processSync(post.content)
+            .toString();
+
+    post.content = content;
+    
+    console.log("toc", toc)
     return (
         <Main>
             <Header />
             <Sidebar>
-                <h2>sdlaksjdklasdkl</h2>
-                askdlaksdlk
-                ñlsakdlkasñl
+                <ul>
+                    {toc.map(( el ) => {
+                        return(
+                            <li key={el.id}>
+                                <Link href={`#${el.id}`}>
+                                    <a>{el.title}</a>
+                                </Link>
+                            </li>
+                        )
+                    })}
+                </ul>
             </Sidebar>
             <link rel="stylesheet" href="https://assets.codigohabil.com/css/prism.css"></link>
             <PostSection post={post}/>   
