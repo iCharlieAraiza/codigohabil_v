@@ -2,13 +2,16 @@ import React from 'react'
 
 import { GET_POST_BY_SLUG, ALL_POSTS } from '../../lib/wordpress/api'
 import fetcher from '../../lib/fetcher';
+import Post from '../post';
 
 const post = ({ postData }) => {
-    const post = postData.data.post;
-    console.log(postData.data.post);  
-    return (
-      <h1>{post.title}</h1>
-    )
+
+  const post = postData.data.post;
+  console.log(postData.data.post);  
+  return (
+    <Post post={post}/>
+
+  )
 }
 
 
@@ -18,7 +21,6 @@ export default post
 export async function getStaticPaths() {
   const response = await fetcher(ALL_POSTS);
   const allPosts = response.data.posts.nodes;
-  console.log(allPosts);
   return {
     paths: allPosts.map(post => `/posts/${post.slug}`),
     fallback: false,

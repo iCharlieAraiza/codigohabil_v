@@ -4,7 +4,7 @@ import PostSection from '../components/PostSection'
 import styled from 'styled-components'
 
 
-const Post = () => {
+const Post = ({post}) => {
 
     return (
         <Main>
@@ -15,7 +15,7 @@ const Post = () => {
                 ñlsakdlkasñl
             </Sidebar>
             <link rel="stylesheet" href="https://assets.codigohabil.com/css/prism.css"></link>
-            <PostSection />   
+            <PostSection post={post}/>   
             <script src="https://assets.codigohabil.com/js/prism.js"></script>
         </Main>
     )

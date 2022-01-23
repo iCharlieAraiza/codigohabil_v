@@ -4,12 +4,17 @@ import styled from 'styled-components'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 
 
-const PostSection = () => {
+const PostSection = ({post}) => {
+    const title =  post.title;
+    const date = post.date;
+    const content = post.content;
+    const subtitle = post.subtitle.subtitle;
+    
     return (
         <Post className='container-post post'>        
             <IconTitle>☕️</IconTitle>
-            <Title>Nuevo post lkdasdk mvc whit the change element</Title>
-            <SubTitle>App organization explained</SubTitle>
+            <Title>{title}</Title>
+            <SubTitle>{subtitle}</SubTitle>
 
             <PostHeaderContainer>
                 <PostInfo>
@@ -19,7 +24,7 @@ const PostSection = () => {
                         </ProfileImg>
                         Carlos Araiza
                     </Author>
-                    <Date>4 days ago</Date>
+                    <Date>{ date }</Date>
                     <ReadTime>
                         <AiOutlineClockCircle/> 20 min
                     </ReadTime>
