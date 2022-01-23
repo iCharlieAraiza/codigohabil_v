@@ -13,6 +13,7 @@ import Link from 'next/link'
     Todo: 
     [] - Fix TOC styling
     [] - Complete TOC functionality
+    [X] - Fix scroll css styling
 */
 
 const Post = ({post}) => {
@@ -41,22 +42,42 @@ const Post = ({post}) => {
 
     post.content = content;
     
+    let tocHTML =  toc.map(( el ) => {
+        return(
+            <li key={el.id}>
+                <Link href={`#${el.id}`}>
+                    <a>{el.title}</a>
+                </Link>
+            </li>
+        )
+    });
+
     console.log("toc", toc)
+
     return (
         <Main>
             <Header />
             <Sidebar>
-                <ul>
-                    {toc.map(( el ) => {
-                        return(
-                            <li key={el.id}>
-                                <Link href={`#${el.id}`}>
-                                    <a>{el.title}</a>
-                                </Link>
-                            </li>
-                        )
-                    })}
-                </ul>
+                {tocHTML.length > 0 ? (
+                    <>
+                        <h3>Tabla de contenidos</h3>
+                        <ul>
+                            {
+                                toc.map(( el ) => {
+                                    return(
+                                        <li key={el.id}>
+                                            <Link href={`#${el.id}`}>
+                                                <a>{el.title}</a>
+                                            </Link>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </>
+                    )
+                    : null}
+        
             </Sidebar>
             <link rel="stylesheet" href="https://assets.codigohabil.com/css/prism.css"></link>
             <PostSection post={post}/>   
