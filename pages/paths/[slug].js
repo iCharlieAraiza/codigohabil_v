@@ -1,8 +1,10 @@
 import React from 'react';
-import { GET_POST_BY_SLUG, GET_ALL_CATEGORIES } from '../../lib/wordpress/api';
+import { GET_POST_BY_SLUG, GET_ALL_CATEGORIES, GET_CATEGORY_BY_SLUG } from '../../lib/wordpress/api';
 import fetcher from '../../lib/fetcher';
 
-const categorie = () => {
+const categorie = (props) => {
+  console.log("slug - id" );
+  console.log(props);
   return <div>
     <h1>Categories</h1>
   </div>;
@@ -34,11 +36,11 @@ export async function getStaticProps({params}) {
       idType: 'SLUG'
     }
   
-    const data = await fetcher(GET_POST_BY_SLUG, { variables })
+    const data = await fetcher(GET_CATEGORY_BY_SLUG, { variables })
   
     return {
       props: {
-        postData: data
+        params: data
       },
     }
       
