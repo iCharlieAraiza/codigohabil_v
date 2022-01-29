@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Breadcrump from './Breadcrump'
 import { BiSearch, BiCalendar } from 'react-icons/bi';
+import Link from 'next/link';
 
-const CategorySection = () => {
+const CategorySection = ({subCategories}) => {
 
     const postsData = [ 
         {   id: 1,  title: 'Fundamentos de java' },
@@ -13,11 +14,32 @@ const CategorySection = () => {
         {   id: 5,  title: 'Fundamentos de PHP con diagramas de flujo' },
     ]
 
+    console.log('sub', subCategories)
+
     return (
         <Section>
             <Container className="container-narrow">
                 <Breadcrump />
-                <CategoryTagContainer>
+                    {
+                        subCategories != undefined ? (
+                            <CategoryTagContainer>
+                            <h2>Contenido</h2>
+                                <CaregoryTagList>
+                                { subCategories.map((el) => {
+                                    return (
+                                        <TagItem key={el.id}>
+                                        <ImgBlock>
+                                            <img src="https://assets.codigohabil.com/img/book.svg" />
+                                        </ImgBlock>
+                                            <TagTitle>
+                                                {el.name}
+                                            </TagTitle>
+                                        </TagItem>)}) }
+                                </CaregoryTagList>
+                            </CategoryTagContainer> )
+                            : ""
+                    }
+                    <CategoryTagContainer>
                     <h2>Contenido</h2>
                     <CaregoryTagList>
                         <TagItem>

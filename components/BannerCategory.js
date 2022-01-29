@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const BannerCategory = () => {
+const BannerCategory = ({props}) => {
+    const title = props.title == undefined ? 'Work' : props.title;
     return (
         <BannerSection>
             <Container className="container-narrow">
@@ -10,11 +11,11 @@ const BannerCategory = () => {
                         <img src="https://hackr.io/tutorials/javascript/logo-javascript.svg" alt="cursos-programacion" />
                     </ImgContainer>
                     <Title>
-                        JavaScript
+                        { title }
                     </Title>
                 </TitleHeader>
                 <Description>
-                    Artículos, tutoriales y cursos sobre JavaScript. De nivel básico a avanzado.
+                    Artículos, tutoriales y cursos sobre { title }. De nivel básico a avanzado.
                 </Description>
             </Container>
         </BannerSection>
