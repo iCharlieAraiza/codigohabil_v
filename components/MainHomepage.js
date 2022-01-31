@@ -3,7 +3,11 @@ import styled from 'styled-components'
 import { BiSearch } from 'react-icons/bi';
 
 
-const MainHomepage = () => {
+const MainHomepage = ({categories}) => {
+    categories.map((el) => {
+        console.log(el.node)
+    })
+
     return (
         <Main>
             <Container className='container'>

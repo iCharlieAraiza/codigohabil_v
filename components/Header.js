@@ -6,6 +6,7 @@ import { BiSearch } from 'react-icons/bi';
 import {GoThreeBars} from 'react-icons/go';
 import {AiOutlineClose} from 'react-icons/ai';
 import { useState } from 'react';
+import Link from 'next/link';
 
 
 const Header = () => {
@@ -19,12 +20,14 @@ const Header = () => {
     return (
         <HeaderContainer>
             <Space />
-
-            <Logo>
-                <img 
-                    src="https://assets.codigohabil.com/img/logo.png"
-                    objectPosition="left" alt="logo" />
-            </Logo>
+            
+            <Link href={'/'}>
+                <Logo>
+                    <img 
+                        src="https://assets.codigohabil.com/img/logo.png"
+                        objectPosition="left" alt="logo" />
+                </Logo>
+            </Link>
 
 
             <SearchContainer>
@@ -94,7 +97,9 @@ const HeaderContainer = styled.header`
     }
 `
 
-const Logo = styled.div`
+const Logo = styled.a`
+    display: flex;
+    cursor: pointer;
     img{
         height: 40px;
     }

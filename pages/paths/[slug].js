@@ -23,23 +23,9 @@ const category = (props) => {
             </Head>
             <Header />
             <BannerCategory props={postInfo}/>
-            <CategorySection subCategories = {subCategories}/>
+            <CategorySection subCategories = {subCategories} posts={posts}/>
             
-            <ul>
-              {subCategories.map(subCategory => {
-                return (
-                  <li key={subCategory.id}>
-                    {subCategory.name}
-                  </li>
-                )
-              })}
 
-            </ul>
-
-            <h2>Posts</h2>
-            <ul>
-              {posts.map(post => <li key={post.id}>{post.title}</li>)}+
-            </ul>
           </div>)
 };
 

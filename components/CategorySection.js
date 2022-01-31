@@ -4,7 +4,7 @@ import Breadcrump from './Breadcrump'
 import { BiSearch, BiCalendar } from 'react-icons/bi';
 import Link from 'next/link';
 
-const CategorySection = ({subCategories}) => {
+const CategorySection = ({subCategories, posts}) => {
 
     const postsData = [ 
         {   id: 1,  title: 'Fundamentos de java' },
@@ -14,7 +14,7 @@ const CategorySection = ({subCategories}) => {
         {   id: 5,  title: 'Fundamentos de PHP con diagramas de flujo' },
     ]
 
-    console.log('sub', subCategories)
+    console.log('post', posts)
 
     return (
         <Section>
@@ -29,7 +29,7 @@ const CategorySection = ({subCategories}) => {
                                     return (
                                         <TagItem key={el.id}>
                                         <ImgBlock>
-                                            <img src="https://assets.codigohabil.com/img/book.svg" />
+                                            <img src={el.categoryInfo.logo} />
                                         </ImgBlock>
                                             <TagTitle>
                                                 {el.name}
@@ -39,6 +39,8 @@ const CategorySection = ({subCategories}) => {
                             </CategoryTagContainer> )
                             : ""
                     }
+
+                   {/*     
                     <CategoryTagContainer>
                     <h2>Contenido</h2>
                     <CaregoryTagList>
@@ -79,30 +81,33 @@ const CategorySection = ({subCategories}) => {
                         </TagItem>
                     </CaregoryTagList>
                 </CategoryTagContainer>
-    
+                */}
+
                 <PostSection>
                     <SearchContainer>
                         <BiSearch style={{'font-size':'1.2rem'}} />
                         <Search placeholder="Busca por el tema" />  
                     </SearchContainer>
                     <PostList>
-                        {postsData.map(post => (
-                            <PostItem key={post.id}>
-                                <PostDescription>
-                                    <ImgBlock>
-                                        <img src="https://assets.codigohabil.com/img/document.svg" alt="cursos-programacion"/>
-                                    </ImgBlock>
-                                    <PostTitle>
-                                        {post.title}
-                                    </PostTitle>
-                                </PostDescription>
-                                <PostInfo>
-                                    <PostDate>
-                                        <BiCalendar />
-                                        12 Nov 2021
-                                    </PostDate>
-                                </PostInfo>
-                            </PostItem>    
+                        {posts.map(post => (
+                            <Link href={`/posts/${post.slug}`}>
+                                <PostItem key={post.id}>
+                                    <PostDescription>
+                                        <ImgBlock>
+                                            <img src="https://assets.codigohabil.com/img/document.svg" alt="cursos-programacion"/>
+                                        </ImgBlock>
+                                        <PostTitle>
+                                            {post.title}
+                                        </PostTitle>
+                                    </PostDescription>
+                                    <PostInfo>
+                                        <PostDate>
+                                            <BiCalendar />
+                                            12 Nov 2021
+                                        </PostDate>
+                                    </PostInfo>
+                                </PostItem>
+                            </Link>    
                         ))}                    
                     </PostList>
                 </PostSection>
@@ -179,7 +184,8 @@ const Search = styled.input`
 const PostList = styled.div`
 `
 
-const PostItem = styled.div`
+const PostItem = styled.a`
+    cursor: pointer;
     border-left: 5px solid transparent;
     box-size: border-box;
     //margin: 10px 0;

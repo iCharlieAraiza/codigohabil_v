@@ -7,7 +7,7 @@ import Post from '../post';
 const post = ({ postData }) => {
 
   const post = postData.data.post;
-  console.log(postData.data.post);  
+  //console.log(postData.data.post);  
   return (
     <Post post={post}/>
 

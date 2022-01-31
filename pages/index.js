@@ -11,10 +11,12 @@ import {
   useQuery,
   gql
 } from "@apollo/client";
+import { GET_ALL_CATEGORIES } from '../lib/wordpress/api'
+import fetcher from '../lib/fetcher'
 
 
-export default function Home({ posts }) {
-  console.log(posts)
+export default function Home({ categories }) {
+  console.log(categories)
 
   return (
     <div>
@@ -29,7 +31,7 @@ export default function Home({ posts }) {
       {/*Banner*/}
       <Banner />
       {/*Main*/}
-      <MainHomepage />
+      <MainHomepage categories={categories}/>
 
 
     </div>
@@ -37,35 +39,19 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const client = new ApolloClient({
-    uri: "https://wp.codigohabil.com/graphql",
-    cache: new InMemoryCache()
-  });
 
-  const response = await client
-    .query({
-      query: gql`
-        query MyQuery {
-          posts {
-            edges {
-              node {
-                title
-                uri
-                excerpt
-                content
-              }
-            }
-          }
-        }
-      `
+  const categories = await fetcher(GET_ALL_CATEGORIES)
+
+  //console.log(categories.data.categories)
+  const el = categories.data.categories.edges.filter(cat => {
+    return cat.node.parent != null
   })
 
-  const posts = response.data.posts.edges.map( ({ node }) => node);
+  console.log(el)
 
-  console.log(posts)
   return {
     props: {
-      posts
+      categories: el
     }
   }
 
