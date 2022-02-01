@@ -14,7 +14,8 @@ const CategorySection = ({subCategories, posts}) => {
         {   id: 5,  title: 'Fundamentos de PHP con diagramas de flujo' },
     ]
 
-    console.log('post', posts)
+    //console.log('post', posts)
+    //console.log('subCategories', subCategories)
 
     return (
         <Section>
@@ -29,7 +30,8 @@ const CategorySection = ({subCategories, posts}) => {
                                     return (
                                         <TagItem key={el.id}>
                                         <ImgBlock>
-                                            <img src={el.categoryInfo.logo} />
+                                            {console.log(el.categoryInfo.icon)}
+                                            <img src={el.categoryInfo.icon} />
                                         </ImgBlock>
                                             <TagTitle>
                                                 {el.name}

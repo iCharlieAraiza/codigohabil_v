@@ -11,6 +11,7 @@ const category = (props) => {
   
   const postInfo = {
     title: props.params.data.category.name,
+    logo: props.params.data.category.categoryInfo.logo,
   }
   console.log(props.params.data.category);
   const posts = props.params.data.category.posts.nodes;

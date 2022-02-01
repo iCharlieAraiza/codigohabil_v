@@ -3,12 +3,17 @@ import styled from 'styled-components'
 
 const BannerCategory = ({props}) => {
     const title = props.title == undefined ? 'Work' : props.title;
+    const logo = props.logo
     return (
         <BannerSection>
             <Container className="container-narrow">
                 <TitleHeader>
                     <ImgContainer>
-                        <img src="https://hackr.io/tutorials/javascript/logo-javascript.svg" alt="cursos-programacion" />
+                        {
+                            logo != undefined ? (
+                                <img src={logo} />
+                            ) : ''
+                        }
                     </ImgContainer>
                     <Title>
                         { title }

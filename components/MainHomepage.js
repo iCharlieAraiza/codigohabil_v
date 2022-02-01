@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { BiSearch } from 'react-icons/bi';
+import Link from 'next/link';
 
 
 const MainHomepage = ({categories}) => {
-    categories.map((el) => {
-        console.log(el.node)
+    console.log("categories", categories[0].node.parent.node.categoryInfo.logo)
+
+    const categoriesData = categories.map((el) => {
+        return el.node.parent.node
     })
 
     return (
@@ -19,44 +22,21 @@ const MainHomepage = ({categories}) => {
                     </SearchContainer>
                 </HeroSearch>
                 <Grid>
-                    <Card>
-                        <ImgContainer>
-                            <img src="https://hackr.io/tutorials/java/logo-java.svg" alt="cursos-programacion" />
-                        </ImgContainer>
-                        <CardTitle>Java</CardTitle>
-                    </Card>
-                    <Card>
-                        <ImgContainer>
-                            <img src="https://hackr.io/tutorials/data-structures-algorithms/logo-data-structures-algorithms.svg" alt="cursos-programacion" />
-                        </ImgContainer>
-                        <CardTitle>Estructuras de datos</CardTitle>
-                    </Card>
-                    <Card>
-                        <ImgContainer>
-                            <img src="https://hackr.io/tutorials/php/logo-php.svg" alt="cursos-programacion" />
-                        </ImgContainer>
-                        <CardTitle>PHP</CardTitle>
-                    </Card>
-                    <Card>
-                        <ImgContainer>
-                            <img src="https://hackr.io/tutorials/javascript/logo-javascript.svg" alt="cursos-programacion" />
-                        </ImgContainer>
-                        <CardTitle>JavaScript</CardTitle>
-                    </Card>
-                    <Card>
-                        <ImgContainer>
-                            <img src="https://hackr.io/tutorials/react/logo-react.svg" alt="cursos-programacion" />
-                        </ImgContainer>
-                        <CardTitle>React</CardTitle>
-                    </Card>
-                    <Card>
-                        <ImgContainer>
-                            <img src="https://hackr.io/tutorials/c/logo-c.svg" alt="cursos-programacion" />
-                        </ImgContainer>
-                        <CardTitle>C</CardTitle>
-                    </Card>
-                    <Card/>
-                    <Card/>
+                    {
+                        categoriesData.map((el) => {
+                            return (
+                                <Link href={`/paths/${el.slug}`}>
+                                    <Card>
+                                        { el.categoryInfo.logo != null ? (
+                                            <ImgContainer>
+                                                <img src={el.categoryInfo.logo} alt={`cursos de ${el.name}`}/>
+                                            </ImgContainer> ) : '' }
+                                        <CardTitle>{ el.name }</CardTitle>
+                                    </Card>
+                                </Link>
+                            )
+                        })
+                    }
                 </Grid>
             </Container>
         </Main>
@@ -105,7 +85,7 @@ const Grid = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 `
 
-const Card = styled.div`
+const Card = styled.a`
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     grid-column: span 1;
     border-radius: 5px;

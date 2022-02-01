@@ -16,7 +16,7 @@ import fetcher from '../lib/fetcher'
 
 
 export default function Home({ categories }) {
-  console.log(categories)
+  console.log("categories", categories[0].node.parent.node.categoryInfo.logo)
 
   return (
     <div>
