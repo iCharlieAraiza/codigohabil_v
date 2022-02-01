@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import { AiOutlineClockCircle } from 'react-icons/ai'
@@ -10,6 +10,11 @@ const PostSection = ({post}) => {
     const content = post.content;
     const subtitle = post.subtitle.subtitle;
     
+    useEffect(() => {
+        window.Prism = window.Prism || {};
+        Prism.disableWorkerMessageHandler = true;
+    }, [])
+
     return (
         <Post className='container-post post'>        
             <IconTitle>☕️</IconTitle>

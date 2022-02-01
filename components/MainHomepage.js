@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { BiSearch } from 'react-icons/bi';
 import Link from 'next/link';
-
+//import Image from 'next/image';
 
 const MainHomepage = ({categories}) => {
     
@@ -30,7 +30,7 @@ const MainHomepage = ({categories}) => {
                                     <Card>
                                         { el.categoryInfo.logo != null ? (
                                             <ImgContainer>
-                                                <img src={el.categoryInfo.logo} alt={`cursos de ${el.name}`}/>
+                                                <img src={el.categoryInfo.logo} alt={`cursos de ${el.name}`} />
                                             </ImgContainer> ) : '' }
                                         <CardTitle>{ el.name }</CardTitle>
                                     </Card>
