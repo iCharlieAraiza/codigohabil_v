@@ -8,7 +8,7 @@ import rehypeStringify from 'rehype-stringify/lib'
 import { visit } from 'unist-util-visit'
 import parameterize from 'parameterize'
 import Link from 'next/link'
-
+import Script from 'next/script'
 /*
     Todo: 
     [] - Fix TOC styling
@@ -100,7 +100,7 @@ const Post = ({post}) => {
             </Sidebar>
             <PostSection post={post}/>   
             <link rel="stylesheet" href="https://assets.codigohabil.com/css/prism.css"></link>
-            <script src="https://assets.codigohabil.com/js/prism.js"></script>
+            <Script src="https://assets.codigohabil.com/js/prism.js"></Script>
         </Main>
     )
 }
