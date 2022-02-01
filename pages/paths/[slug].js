@@ -13,7 +13,7 @@ const category = (props) => {
     title: props.params.data.category.name,
     logo: props.params.data.category.categoryInfo.logo,
   }
-  console.log(props.params.data.category);
+  //console.log(props.params.data.category);
   const posts = props.params.data.category.posts.nodes;
   const subCategories = props.params.data.category.children.nodes;
   return ( <div>
@@ -24,7 +24,7 @@ const category = (props) => {
             </Head>
             <Header />
             <BannerCategory props={postInfo}/>
-            <CategorySection subCategories = {subCategories} posts={posts}/>
+            <CategorySection subCategories = {subCategories} posts={posts} category={postInfo} />
             
 
           </div>)

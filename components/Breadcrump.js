@@ -1,12 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'next/link'
 
-const Breadcrump = () => {
+const Breadcrump = ({route}) => {
+    console.log('route', route)
     return (
         <BreadcrumbList>
-            <BreadcrumbItem>Inicio</BreadcrumbItem>
-            
-            <BreadcrumbItem>JavaScript</BreadcrumbItem>
+            <BreadcrumbItem>
+                <Link href={"/"}>
+                    <a href="/">Inicio</a>
+                </Link>
+            </BreadcrumbItem>
+            {route != undefined ?
+                <BreadcrumbItem>
+                    { route.name }
+                </BreadcrumbItem>
+            : ''}
         </BreadcrumbList>
     )
 }

@@ -4,7 +4,7 @@ import Breadcrump from './Breadcrump'
 import { BiSearch, BiCalendar } from 'react-icons/bi';
 import Link from 'next/link';
 
-const CategorySection = ({subCategories, posts}) => {
+const CategorySection = ({subCategories, posts, category}) => {
 
     const postsData = [ 
         {   id: 1,  title: 'Fundamentos de java' },
@@ -16,11 +16,12 @@ const CategorySection = ({subCategories, posts}) => {
 
     //console.log('post', posts)
     //console.log('subCategories', subCategories)
+    //console.log('categories', category)
 
     return (
         <Section>
             <Container className="container-narrow">
-                <Breadcrump />
+                <Breadcrump route={{ name: category.title}}/>
                     {
                         subCategories != undefined ? (
                             <CategoryTagContainer>
