@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 
 const MainHomepage = ({categories}) => {
+    
     console.log("categories", categories[0].node.parent.node.categoryInfo.logo)
 
     const categoriesData = categories.map((el) => {
@@ -25,7 +26,7 @@ const MainHomepage = ({categories}) => {
                     {
                         categoriesData.map((el) => {
                             return (
-                                <Link href={`/paths/${el.slug}`}>
+                                <Link href={`/paths/${el.slug}`} key={el.id}>
                                     <Card>
                                         { el.categoryInfo.logo != null ? (
                                             <ImgContainer>

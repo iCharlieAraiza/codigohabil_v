@@ -8,7 +8,7 @@ const Breadcrump = ({route}) => {
         <BreadcrumbList>
             <BreadcrumbItem>
                 <Link href={"/"}>
-                    <a href="/">Inicio</a>
+                    <a>Inicio</a>
                 </Link>
             </BreadcrumbItem>
             {route != undefined ?

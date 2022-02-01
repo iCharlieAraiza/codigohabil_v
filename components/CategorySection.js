@@ -30,10 +30,10 @@ const CategorySection = ({subCategories, posts, category}) => {
                                 { subCategories.map((el) => {
                                     return (
                                         <TagItem key={el.id}>
-                                        <ImgBlock>
-                                            {console.log(el.categoryInfo.icon)}
-                                            <img src={el.categoryInfo.icon} />
-                                        </ImgBlock>
+                                            <ImgBlock>
+                                                {console.log(el.categoryInfo.icon)}
+                                                <img src={el.categoryInfo.icon} />
+                                            </ImgBlock>
                                             <TagTitle>
                                                 {el.name}
                                             </TagTitle>
@@ -93,8 +93,8 @@ const CategorySection = ({subCategories, posts, category}) => {
                     </SearchContainer>
                     <PostList>
                         {posts.map(post => (
-                            <Link href={`/posts/${post.slug}`}>
-                                <PostItem key={post.id}>
+                            <Link href={`/posts/${post.slug}`}  key={post.id}>
+                                <PostItem>
                                     <PostDescription>
                                         <ImgBlock>
                                             <img src="https://assets.codigohabil.com/img/document.svg" alt="cursos-programacion"/>

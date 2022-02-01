@@ -16,6 +16,7 @@ const category = (props) => {
   //console.log(props.params.data.category);
   const posts = props.params.data.category.posts.nodes;
   const subCategories = props.params.data.category.children.nodes;
+  
   return ( <div>
             <Head>
               <title>Código Hábil</title>
