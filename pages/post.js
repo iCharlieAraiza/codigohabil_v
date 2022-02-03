@@ -99,8 +99,6 @@ const Post = ({post}) => {
         
             </Sidebar>
             <PostSection post={post}/>   
-            <link rel="stylesheet" href="https://assets.codigohabil.com/css/prism.css"></link>
-            <Script src="https://assets.codigohabil.com/js/prism.js"></Script>
         </Main>
     )
 }

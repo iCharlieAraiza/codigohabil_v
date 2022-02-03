@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
+const prism = require("prismjs")
+require('prismjs/components/prism-java');
+
+
 
 import { AiOutlineClockCircle } from 'react-icons/ai'
 
@@ -11,9 +15,8 @@ const PostSection = ({post}) => {
     const subtitle = post.subtitle.subtitle;
     
     useEffect(() => {
-        window.Prism = window.Prism || {};
-        Prism.disableWorkerMessageHandler = true;
-    }, [])
+        prism.highlightAll();
+      }, []);
 
     return (
         <Post className='container-post post'>        

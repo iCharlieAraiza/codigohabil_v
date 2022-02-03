@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Blog = ({ allPosts }) => { 
     const posts = allPosts;
-    console.log(posts);
+    //console.log(posts);
     return (
         <div>
             <h1>Blog</h1>
