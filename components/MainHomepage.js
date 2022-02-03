@@ -4,12 +4,18 @@ import { BiSearch } from 'react-icons/bi';
 import Link from 'next/link';
 //import Image from 'next/image';
 
-const MainHomepage = ({categories}) => {
-    
-    console.log("categories", categories[0].node.parent.node.categoryInfo.logo)
+const MainHomepage = ({categories}) => { 
+
+    //console.log("categories", categories[0].node.parent.node.categoryInfo.logo)
 
     const categoriesData = categories.map((el) => {
         return el.node.parent.node
+    })
+
+    categoriesData.sort((a, b) => {
+        if(a.count > b.count) return -1;
+        if(a.count < b.count) return 1;
+        return 0;
     })
 
     return (

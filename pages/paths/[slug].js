@@ -36,7 +36,7 @@ export default category;
 export async function getStaticPaths() {
     const response = await fetcher(GET_ALL_CATEGORIES);
     const allCategories = response.data.categories.edges;
-    console.log(allCategories[0].node.parent.node.slug);
+    //console.log(allCategories[0].node.parent.node.slug);
     
     const net = allCategories.map(cat => cat.node.parent);
     const child = net.map(cat => {

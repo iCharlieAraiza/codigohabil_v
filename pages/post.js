@@ -18,11 +18,6 @@ import Script from 'next/script'
 
 const Post = ({post}) => {
 
-    useEffect(() => {
-        window.Prism = window.Prism || {};
-        Prism.disableWorkerMessageHandler = true;
-    }, [])
-
     if(post === undefined) {
         return null
     }
