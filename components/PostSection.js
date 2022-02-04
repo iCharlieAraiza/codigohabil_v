@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const prism = require("prismjs")
 require('prismjs/components/prism-java');
 
+import moment from "moment";
 
 
 import { AiOutlineClockCircle } from 'react-icons/ai'
@@ -13,6 +14,7 @@ const PostSection = ({post}) => {
     const date = post.date;
     const content = post.content;
     const subtitle = post.subtitle.subtitle;
+    const author = post.author.node.name;
     
     useEffect(() => {
         prism.highlightAll();
@@ -23,16 +25,15 @@ const PostSection = ({post}) => {
             <IconTitle>☕️</IconTitle>
             <Title>{title}</Title>
             <SubTitle>{subtitle}</SubTitle>
-
             <PostHeaderContainer>
                 <PostInfo>
                     <Author>
                         <ProfileImg>
                             <img src="https://miro.medium.com/fit/c/28/28/1*JAheLM4qvY3oo7iY9s4Qgw.jpeg" alt="logo" />
                         </ProfileImg>
-                        Carlos Araiza
+                        { author }
                     </Author>
-                    <Date>{ date }</Date>
+                    <Date>Publicado: { moment(date).format("L") }</Date>
                     <ReadTime>
                         <AiOutlineClockCircle/> 20 min
                     </ReadTime>
