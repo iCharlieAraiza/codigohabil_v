@@ -130,15 +130,16 @@ const Sidebar = styled.aside`
     }
 `
 const TOC = styled.div`
-  margin-top: 1rem;
-  padding: 1rem;
-  position: sticky;
-  top: 2rem;
+    margin-top: 3.5rem;
+    padding: 1rem;
+    position: sticky;
+    top: 4rem;
+    background-color: #f0f2f3;      
 `
 
 const TitleTOC = styled.h3`
     font-size: 18px;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     color: #484848;
     text-transform: uppercase;
@@ -162,11 +163,11 @@ const ListTOC = styled.ul`
         }
         &._h3{
             color: #b4b4b4;
-            margin-left: 1rem;
+            margin-left: 2rem;
             font-size: 16px;
             &:before{
                 content: '';
-                margin-right: 0.5rem;
+                margin-right: 0;
                 color: #b1a257;
             }
         }

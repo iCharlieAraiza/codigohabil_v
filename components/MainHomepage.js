@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import { BiSearch } from 'react-icons/bi';
 import Link from 'next/link';
@@ -17,6 +17,12 @@ const MainHomepage = ({categories}) => {
         if(a.count < b.count) return 1;
         return 0;
     })
+    
+    const [search, setSearch] = useState('');
+
+    const handleChange = (e) => {
+        setSearch(e.target.value);
+    }
 
     return (
         <Main>
@@ -25,12 +31,16 @@ const MainHomepage = ({categories}) => {
                     <TitleHero>¿Qué temas te interesa aprender?</TitleHero>
                     <SearchContainer>
                         <BiSearch />
-                        <Search placeholder="Start your search" />
+                        <Search placeholder="Start your search" onChange={target => handleChange(target)}/>
                     </SearchContainer>
                 </HeroSearch>
                 <Grid>
                     {
-                        categoriesData.map((el) => {
+                        categoriesData.filter(
+                            (el) => {
+                                return el.name.toLowerCase().includes(search.toLowerCase())
+                            }   
+                        ).map((el) => {
                             return (
                                 <Link href={`/paths/${el.slug}`} key={el.id}>
                                     <Card>
@@ -52,7 +62,7 @@ const MainHomepage = ({categories}) => {
 
 
 const Main = styled.main`
-
+    min-height: 50vh;
 `
 
 const Container = styled.div`
