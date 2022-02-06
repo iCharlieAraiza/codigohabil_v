@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import Breadcrump from './Breadcrump'
 import { BiSearch, BiCalendar } from 'react-icons/bi';
@@ -13,6 +13,12 @@ const CategorySection = ({subCategories, posts, category}) => {
         {   id: 4,  title: 'Fundamentos de java con dibujos' },
         {   id: 5,  title: 'Fundamentos de PHP con diagramas de flujo' },
     ]
+
+    const [search, setSearch] = useState('');
+
+    const handleChange = (e) => {
+        setSearch(e.target.value);
+    }
 
     //console.log('post', posts)
     //console.log('subCategories', subCategories)
@@ -31,7 +37,6 @@ const CategorySection = ({subCategories, posts, category}) => {
                                     return (
                                         <TagItem key={el.id}>
                                             <ImgBlock>
-                                                {console.log(el.categoryInfo.icon)}
                                                 <img src={el.categoryInfo.icon} />
                                             </ImgBlock>
                                             <TagTitle>
@@ -89,10 +94,14 @@ const CategorySection = ({subCategories, posts, category}) => {
                 <PostSection>
                     <SearchContainer>
                         <BiSearch style={{'font-size':'1.2rem'}} />
-                        <Search placeholder="Busca por el tema" />  
+                        <Search placeholder="Busca por el tema" onChange={target => handleChange(target)}/>  
                     </SearchContainer>
                     <PostList>
-                        {posts.map(post => (
+                        {posts.filter(
+                                    (el) => {
+                                        return el.title.toLowerCase().includes(search.toLowerCase())
+                                    }
+                                ).map(post => (
                             <Link href={`/posts/${post.slug}`}  key={post.id}>
                                 <PostItem>
                                     <PostDescription>

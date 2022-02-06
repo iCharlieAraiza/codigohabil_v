@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 const prism = require("prismjs")
 require('prismjs/components/prism-java');
@@ -16,9 +16,20 @@ const PostSection = ({post}) => {
     const subtitle = post.subtitle.subtitle;
     const author = post.author.node.name;
     
+    const [minutes, setMinutes] = useState(1);
+
     useEffect(() => {
         prism.highlightAll();
-      }, []);
+    }, []);
+    
+    useEffect(() => {
+        const text = document.querySelector('.words').innerText;
+        const wpm = 225;
+        const words = text.trim().split(/\s+/).length;
+        setMinutes(Math.ceil(words / wpm));
+        //const minutes = Math.ceil(words / wpm);
+    }, []);
+
 
     return (
         <Post className='container-post post'>        
@@ -35,11 +46,11 @@ const PostSection = ({post}) => {
                     </Author>
                     <Date>Publicado: { moment(date).format("L") }</Date>
                     <ReadTime>
-                        <AiOutlineClockCircle/> 20 min
+                        <AiOutlineClockCircle/> {minutes} min
                     </ReadTime>
                 </PostInfo>
             </PostHeaderContainer>
-            <div dangerouslySetInnerHTML={{__html: content}} />
+            <div dangerouslySetInnerHTML={{__html: content}} className="words"/>
             
             {/* 
             <p><b>MVC is short for Model, View, and Controller.</b> MVC is a popular way of organizing your code. The big idea behind MVC is that each section of your code has a purpose, and those purposes are different. Some of your code holds the data of your app, some of your code makes your app look nice, and some of your code controls how your app functions.</p>
