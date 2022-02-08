@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useSession, signIn, signOut } from "next-auth/react"
 import styled from 'styled-components';
 import { FaUserAlt } from 'react-icons/fa';
-import {AiFillGithub} from 'react-icons/ai';
+import { AiFillGithub, AiOutlineGoogle } from 'react-icons/ai';
 
 export default function Login() {
     const { data: session } = useSession()
@@ -34,11 +34,21 @@ export default function Login() {
         <LoginBtn onClick={()=> handleOpen()}><span>Iniciar Sesión</span></LoginBtn>
         {
             open == true ? (
-                <Modal onClick={()=>handleOpen()}> 
+                <Modal> 
+                    <Overlay onClick={()=>handleOpen()}/>
                     <SignUpContainer>
                         <LoginTitle>¡Bienvenid@ a Código Hábil!</LoginTitle>
                         <ButtonSection>
-                            <SignInBtn className='_github' onClick={() => signIn()}> <AiFillGithub /> GitHub</SignInBtn>
+                            <SignInBtn className='_github' onClick={() => signIn()}> 
+                                <AiFillGithub /> 
+                                <span>GitHub</span>
+                                <SpaceBtn>......</SpaceBtn>
+                            </SignInBtn>
+                            <SignInBtn className='_google'> 
+                                <AiOutlineGoogle /> 
+                                <span>Google</span>
+                                <SpaceBtn>......</SpaceBtn>
+                            </SignInBtn>
                         </ButtonSection>
                     </SignUpContainer>
                 </Modal> ) : ''
@@ -81,6 +91,16 @@ const Modal = styled.div`
     height: 100vh;
 `
 
+const Overlay = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000087;
+    z-index: 3; 
+`
+
 const SignUpContainer = styled.div`
     position: absolute;
     top: 50%;
@@ -90,7 +110,8 @@ const SignUpContainer = styled.div`
     height: 80%;
     max-width: 500px;
     background-color: #fff;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    z-index: 4;
 `
 
 const LoginTitle = styled.h3`
@@ -106,12 +127,13 @@ const ButtonSection = styled.div`
 const SignInBtn = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 5px;
     color: #fff;
     padding: 1rem;
     cursor: pointer;
     font-weight: bold;
+    margin-bottom: 1rem;
 
     &:hover{
         opacity: 0.8;
@@ -121,10 +143,18 @@ const SignInBtn = styled.div`
     svg{
         width: 1.5rem;
         height: 1.5rem;
-        margin-right: 0.5rem;
     }
 
     &._github{
-        background-color: gray;
+        background-color: #333333;
     }
+
+    &._google{
+        background-color: #EA4335;
+    }
+`
+
+const SpaceBtn = styled.div`
+    content: "......";
+    color: transparent;
 `

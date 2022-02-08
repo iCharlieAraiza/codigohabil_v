@@ -29,7 +29,7 @@ const Header = () => {
                 <Logo>
                     <img 
                         src="https://assets.codigohabil.com/img/logo.png"
-                        objectPosition="left" alt="logo" />
+                        alt="logo" />
                 </Logo>
             </Link>
 

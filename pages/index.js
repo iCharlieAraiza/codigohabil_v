@@ -45,8 +45,6 @@ export async function getStaticProps() {
     return cat.node.parent != null
   })
 
-  console.log(el)
-
   return {
     props: {
       categories: el
