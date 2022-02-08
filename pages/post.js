@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import Header from '../components/Header'
 import PostSection from '../components/PostSection'
 import styled from 'styled-components'
@@ -17,12 +17,27 @@ import Script from 'next/script'
 */
 
 const Post = ({post}) => {
+    const toc = [];
+
+    useEffect(() => {
+        const onScroll = () => {
+            const scrolly = window.pageYOffset;
+            toc.forEach(el => {
+                if(el.position != null) {
+                    if(scrolly > el.position.start && scrolly < el.position.end) {
+                        console.log(el.title);
+                    }
+                }
+            })}            
+
+        window.addEventListener('scroll', onScroll);
+          
+        return () => window.removeEventListener('scroll', onScroll);
+        }, []);
 
     if(post === undefined) {
         return null
     }
-
-    const toc = [];
 
     const content = unified()
         .use(rehypeParse, { fragment: true })
@@ -32,15 +47,19 @@ const Post = ({post}) => {
                     if (node.tagName === 'h2') {
                         const id = parameterize(node.children[0].value)
                         node.properties.id = id
+                        //console.log('component')
+
                         toc.push({
                             id,
                             title: node.children[0].value,
-                            type:'_h2'
+                            type:'_h2',
+                            position: {start: node.children[0].position.start.offset, end: node.children[0].position.end.offset},
+                            active: false
                         })
                     }
 
                     if(node.tagName ==='h3'){
-                        console.log("H3 tag", node.children[0])
+                        //console.log("H3 tag", node.children[0])
                         if(node.children[0].value != undefined){
                             const id = parameterize(node.children[0].value)
                             node.properties = {id: id};
@@ -61,6 +80,7 @@ const Post = ({post}) => {
 
     post.content = content;
     
+
     let tocHTML =  toc.map(( el ) => {
         return(
             <li key={el.id}>
@@ -71,7 +91,7 @@ const Post = ({post}) => {
         )
     });
 
-    //console.log("toc", toc)
+    //console.log( tocHTML)
 
     return (
         <Main>
@@ -83,6 +103,8 @@ const Post = ({post}) => {
                         <ListTOC>
                             {
                                 toc.map(( el ) => {
+                                    const active = el.active ? 'active' : '';
+                                    console.log(active)
                                     return(
                                         <li key={el.id} className={el.type}>
                                             <Link href={`#${el.id}`} >

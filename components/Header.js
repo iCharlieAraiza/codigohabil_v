@@ -7,6 +7,8 @@ import {GoThreeBars} from 'react-icons/go';
 import {AiOutlineClose} from 'react-icons/ai';
 import { useState } from 'react';
 import Link from 'next/link';
+import { useSession, signIn, signOut } from "next-auth/react"
+import Login from './auth/Login.js';
 
 
 const Header = () => {
@@ -16,6 +18,8 @@ const Header = () => {
     const handleClick = () => {
         setOpen(!open);
     }
+
+    const { data: session } = useSession()
 
     return (
         <HeaderContainer>
@@ -54,12 +58,15 @@ const Header = () => {
                 }
             </SearchContainer>
             <MenuContainer>
-                <LoginBtn>
+                <Login />
+                { /*
+                <LoginBtn onClick={()=>signIn()}>
                     <span>Iniciar Sesión</span>
                 </LoginBtn>
-                <SignUpBtn>
-                    <span>Registrarse</span>
+                <SignUpBtn onClick={()=>signOut()}>
+                    <span>Salir Sesión</span>
                 </SignUpBtn>
+                */}
             </MenuContainer>
             <MenuButton>
                 <MenuBtnIcon />

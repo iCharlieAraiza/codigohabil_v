@@ -13,9 +13,10 @@ import {
 } from "@apollo/client";
 import { GET_ALL_CATEGORIES } from '../lib/wordpress/api'
 import fetcher from '../lib/fetcher'
-
+//import { useSession, signIn, signOut } from "next-auth/react"
 
 export default function Home({ categories }) {
+
   return (
     <div>
       <Head>
@@ -30,7 +31,6 @@ export default function Home({ categories }) {
       <Banner />
       {/*Main*/}
       <MainHomepage categories={categories}/>
-
 
     </div>
   )

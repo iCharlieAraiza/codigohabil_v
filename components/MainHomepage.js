@@ -46,7 +46,7 @@ const MainHomepage = ({categories}) => {
                                     <Card>
                                         { el.categoryInfo.logo != null ? (
                                             <ImgContainer>
-                                                <img src={el.categoryInfo.logo} alt={`cursos de ${el.name}`} />
+                                                <img src={el.categoryInfo.logo} alt={`cursos de ${el.name}`} width="50" height="50"/>
                                             </ImgContainer> ) : '' }
                                         <CardTitle>{ el.name }</CardTitle>
                                     </Card>
