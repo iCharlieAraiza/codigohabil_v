@@ -93,7 +93,7 @@ const CategorySection = ({subCategories, posts, category}) => {
 
                 <PostSection>
                     <SearchContainer>
-                        <BiSearch style={{'font-size':'1.2rem'}} />
+                        <BiSearch style={{'fontSize':'1.2rem'}} />
                         <Search placeholder="Busca por el tema" onChange={target => handleChange(target)}/>  
                     </SearchContainer>
                     <PostList>

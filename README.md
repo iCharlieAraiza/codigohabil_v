@@ -1,8 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## CódigoHábil.com
 
-First, run the development server:
+A website which help you to learn coding faster and better.
 
 ```bash
 npm run dev
