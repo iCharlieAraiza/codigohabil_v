@@ -1,5 +1,7 @@
 import NextAuth from "next-auth"
 import GithubProvider from "next-auth/providers/github"
+import GoogleProvider from "next-auth/providers/google";
+
 
 export default NextAuth({
   // Configure one or more authentication providers
@@ -7,6 +9,10 @@ export default NextAuth({
     GithubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET,
     }),
     // ...add more providers here
   ],
@@ -22,6 +28,13 @@ export default NextAuth({
       // Send properties to the client, like an access_token from a provider.
       session.accessToken = token.accessToken
       return session
-    }
+    },
+    async signIn({ account, profile }) {
+      if (account.provider === "google") {
+        return true;
+        return profile.email_verified && profile.email.endsWith("@example.com")
+      }
+      return true // Do different verification for other providers that don't have `email_verified`
+    },
   }
 })

@@ -39,12 +39,12 @@ export default function Login() {
                     <SignUpContainer>
                         <LoginTitle>¡Bienvenid@ a Código Hábil!</LoginTitle>
                         <ButtonSection>
-                            <SignInBtn className='_github' onClick={() => signIn()}> 
+                            <SignInBtn className='_github' onClick={() => signIn('github')}> 
                                 <AiFillGithub /> 
                                 <span>GitHub</span>
                                 <SpaceBtn>......</SpaceBtn>
                             </SignInBtn>
-                            <SignInBtn className='_google'> 
+                            <SignInBtn className='_google' onClick={() => signIn('google')}> 
                                 <AiOutlineGoogle /> 
                                 <span>Google</span>
                                 <SpaceBtn>......</SpaceBtn>
