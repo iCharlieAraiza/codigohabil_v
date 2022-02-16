@@ -1,17 +1,38 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import css from '../styles/styles.js'
-
+import React, { useState, useEffect } from 'react'
 import { BiSearch } from 'react-icons/bi';
 import {GoThreeBars} from 'react-icons/go';
 import {AiOutlineClose} from 'react-icons/ai';
-import { useState } from 'react';
 import Link from 'next/link';
 import { useSession, signIn, signOut } from "next-auth/react"
 import Login from './auth/Login.js';
-
+import useDarkMode from 'use-dark-mode'
+import { lightTheme, darkTheme } from '../styles/theme.js';
+import { BsFillSunFill } from 'react-icons/bs';
+import { FaRegMoon } from 'react-icons/fa';
 
 const Header = () => {
+
+    const [isMounted, setIsMounted] = useState(false)
+    const darkMode = useDarkMode(true)
+    const theme = darkMode.value ? darkTheme : lightTheme
+    const toggleTheme = () => {
+        if(darkMode.value){
+            darkMode.disable
+            return true;
+        }else{
+            darkMode.enable
+            return false;
+        }
+    }
+
+    const [isDarkMode, setIsDarkMode] = useState( () => false );
+
+    useEffect(() => {
+      setIsMounted(true)
+    }, [])
 
     const [open, setOpen] = useState(false);
 
@@ -58,15 +79,19 @@ const Header = () => {
                 }
             </SearchContainer>
             <MenuContainer>
+                {
+                    darkMode.value ? (
+                        <DarkModeBtn onClick={darkMode.disable}>
+                            <FaRegMoon width="30px" />
+                        </DarkModeBtn>
+                    ) : (
+                        <DarkModeBtn onClick={darkMode.enable}>
+                            <BsFillSunFill width="30px" />
+                        </DarkModeBtn>
+                    )
+                }
+
                 <Login />
-                { /*
-                <LoginBtn onClick={()=>signIn()}>
-                    <span>Iniciar Sesión</span>
-                </LoginBtn>
-                <SignUpBtn onClick={()=>signOut()}>
-                    <span>Salir Sesión</span>
-                </SignUpBtn>
-                */}
             </MenuContainer>
             <MenuButton>
                 <MenuBtnIcon />
@@ -133,6 +158,12 @@ const SearchContainer = styled.div`
     margin-right: 1rem;
     width: 100%;
     max-width: 210px;
+
+    svg {
+        height: 20px;
+        width: 20px;
+    }
+
     @media (min-width:801px) { 
         /* tablet, landscape iPad, lo-res laptops ands desktops */ 
         display: flex;
@@ -222,6 +253,18 @@ const MenuButton = styled.div`
     }
     @media (min-width:801px) { 
         display: none;
+    }
+`
+
+const DarkModeBtn = styled.button`
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    margin-right: 1rem;
+    svg{
+        width: 18px;
+        height: 18px;
+        color: white;
     }
 `
     //color: white;

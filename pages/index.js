@@ -15,8 +15,8 @@ import { GET_ALL_CATEGORIES } from '../lib/wordpress/api'
 import fetcher from '../lib/fetcher'
 //import { useSession, signIn, signOut } from "next-auth/react"
 
-export default function Home({ categories }) {
-
+export default function Home({ categories, theme}) {
+  console.log(theme)
   return (
     <div>
       <Head>
@@ -37,7 +37,6 @@ export default function Home({ categories }) {
 }
 
 export async function getStaticProps() {
-
   const categories = await fetcher(GET_ALL_CATEGORIES)
 
   //console.log(categories.data.categories)
@@ -47,7 +46,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      categories: el
+      categories: el,
     }
   }
 

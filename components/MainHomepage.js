@@ -4,10 +4,8 @@ import { BiSearch } from 'react-icons/bi';
 import Link from 'next/link';
 //import Image from 'next/image';
 
-const MainHomepage = ({categories}) => { 
-
+const MainHomepage = ({categories, theme}) => { 
     //console.log("categories", categories[0].node.parent.node.categoryInfo.logo)
-
     const categoriesData = categories.map((el) => {
         return el.node.parent.node
     })
