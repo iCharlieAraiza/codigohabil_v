@@ -156,14 +156,14 @@ const TOC = styled.div`
     padding: 1rem;
     position: sticky;
     top: 4rem;
-    background-color: #f0f2f3;      
+    background-color: ${props => props.theme.toc.bg};      
 `
 
 const TitleTOC = styled.h3`
     font-size: 18px;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: #484848;
+    color: ${props => props.theme.toc.title};
     text-transform: uppercase;
 `
 
@@ -171,7 +171,7 @@ const ListTOC = styled.ul`
     list-style: none;
     padding: 0;
     li{
-        color: #7c7c7c;
+        color: ${props => props.theme.toc.li};
         font-weight: 500;
         padding-bottom: 1rem;
         font-size: 16zpx;

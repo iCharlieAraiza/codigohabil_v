@@ -11,12 +11,18 @@ const light = {
         p:'#3a3d3d'
     },
     headerGradient: 'linear-gradient(180deg,rgba(207,207,227,0.4) 0%,rgb(185 185 185 / 15%) 40%);',
+    heroURL: '	https://assets.codigohabil.com/img/background-banner.svg',
     hoverList: '#f5f5f5',
     fontColor: '#202020',
     menu: css.colors.primary,
     mediumFont: '#707070',
     overlayer: 'white',
-    title: '#2e2e2e'
+    title: '#2e2e2e',
+    toc:{
+        bg: 'rgb(240, 242, 243)',
+        title: '#484848',
+        li: '#7c7c7c'
+    }
   }
   
   const dark = {
@@ -28,13 +34,19 @@ const light = {
       p: '#d0d0d0',
       titlePost: 'white'
     },
+    heroURL: 'https://assets.codigohabil.com/img/background-banner-dark.svg',
     headerGradient:  'linear-gradient(180deg,rgb(102 102 102 / 40%) 0%,rgb(185 185 185 / 15%) 40%);',
     hoverList: 'rgb(255 255 255 / 6%);',
     fontColor: 'white',
     menu: "#394256",
     mediumFont: 'white',
     overlayer: '#2c3546;',
-    title: 'white'
+    title: 'white',
+    toc:{
+      bg: 'rgb(57 66 86 / 44%)',
+      title: 'white',
+      li: '#d0d0d0'
+  }
   }
   
   export const darkTheme = { ...dark }

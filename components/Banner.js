@@ -27,7 +27,7 @@ const Banner = () => {
 }
 
 const BannerSection = styled.section`
-    background-image: url('https://assets.codigohabil.com/img/background-banner.svg');
+    background-image: url(${props => props.theme.heroURL});
     background-size: cover;
     background-position: center;
     height: 100vh;
