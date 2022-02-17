@@ -86,6 +86,8 @@ const Search = styled.input`
     border: none;
     width: 100%;
     margin-left: 10px;
+    background: transparent;
+    color: ${props => props.theme.fontColor};
     &:focus {
         outline: none; 
     }
@@ -107,7 +109,7 @@ const Card = styled.a`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: #fff;
+    background-color: ${props => props.theme.overlayer};
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     &:hover {
@@ -132,7 +134,7 @@ const ImgContainer = styled.div`
 const CardTitle = styled.h3`
     text-align: center;
     font-size: 14px;
-    color: #707070;
+    color: ${props => props.theme.mediumFont};
     margin-top:10px;
 `
 

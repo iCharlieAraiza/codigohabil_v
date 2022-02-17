@@ -43,5 +43,10 @@ export default function App({
 const GlobalStyle = createGlobalStyle`
   body {
     background: ${props => props.theme.bg};
+    color: ${props => props.theme.fontColor};
+  }
+  main{
+    background: ${props => props.theme.bg};
+    color: ${props => props.theme.fontColor};
   }
 `;

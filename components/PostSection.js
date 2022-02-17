@@ -149,7 +149,7 @@ const PostSection = ({post}) => {
 }
 
 const Post = styled.article`
-    background: #fff;
+    background: ${props => props.theme.bg};
     margin-top: 1rem;
     padding-bottom: 2rem;
 
@@ -161,11 +161,11 @@ const Post = styled.article`
         font-family: 'IBM Plex Serif', serif;
         line-height: 32px;
         font-size: 18px;
-        color: rgba(41, 41, 41, 1);
+        color: ${props => props.theme.colors.p};
     }
 
     h2, h3, h4{
-        color: #2e2e2e;
+        color: ${props => props.theme.colors.h};
         margin: 0;
         margin-top: 2rem;
         margin-bottom: 1rem;
@@ -224,6 +224,10 @@ const Post = styled.article`
         font-size: 16px;
     }
 
+    p, li{
+        color: ${props => props.theme.colors.p};
+    }
+
     .question-container{
         color: #57585f;
         margin-bottom: 1rem;
@@ -259,7 +263,7 @@ const Title = styled.h1`
     margin: 0;
     font-weight: 700;
     line-height: 1.2;
-    color: #2e2e2e;
+    color: ${props => props.theme.colors.title};
     @media (min-width:600px) { 
         /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
         font-size: 2.75rem;

@@ -1,11 +1,40 @@
+import css from '../styles/styles';
+
 const light = {
     bg: 'white',
-    fontColor: 'purple'
+    colors:{
+        fontMedium: '#707070',
+        gray: '#a1a1a1',
+        h:'#2e2e2e',
+        mediumGray: '#535353',
+        titlePost: '#2e2e2e',
+        p:'#3a3d3d'
+    },
+    headerGradient: 'linear-gradient(180deg,rgba(207,207,227,0.4) 0%,rgb(185 185 185 / 15%) 40%);',
+    hoverList: '#f5f5f5',
+    fontColor: '#202020',
+    menu: css.colors.primary,
+    mediumFont: '#707070',
+    overlayer: 'white',
+    title: '#2e2e2e'
   }
   
   const dark = {
     bg: "#262f40",
-    fontColor: 'white'
+    colors:{
+      fontMedium: '#d0d0d0',
+      gray: '#d0d0d0',
+      mediumGray: 'white',
+      p: '#d0d0d0',
+      titlePost: 'white'
+    },
+    headerGradient:  'linear-gradient(180deg,rgb(102 102 102 / 40%) 0%,rgb(185 185 185 / 15%) 40%);',
+    hoverList: 'rgb(255 255 255 / 6%);',
+    fontColor: 'white',
+    menu: "#394256",
+    mediumFont: 'white',
+    overlayer: '#2c3546;',
+    title: 'white'
   }
   
   export const darkTheme = { ...dark }

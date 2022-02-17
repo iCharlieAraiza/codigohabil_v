@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styled from 'styled-components'
 import css from '../styles/styles.js'
 import React, { useState, useEffect } from 'react'
@@ -82,11 +81,11 @@ const Header = () => {
                 {
                     darkMode.value ? (
                         <DarkModeBtn onClick={darkMode.disable}>
-                            <FaRegMoon width="30px" />
+                            <BsFillSunFill width="30px" />
                         </DarkModeBtn>
                     ) : (
                         <DarkModeBtn onClick={darkMode.enable}>
-                            <BsFillSunFill width="30px" />
+                            <FaRegMoon width="30px" />
                         </DarkModeBtn>
                     )
                 }
@@ -111,7 +110,7 @@ const HeaderContainer = styled.header`
     justify-content: space-between;
     align-self: center;
     padding: 0 1rem;
-    background-color: ${css.colors.primary};
+    background-color: ${props => props.theme.menu};
     color: #fff;
     position: fixed;
     width: 100%;

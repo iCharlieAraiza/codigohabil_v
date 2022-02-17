@@ -6,23 +6,12 @@ import Link from 'next/link';
 
 const CategorySection = ({subCategories, posts, category}) => {
 
-    const postsData = [ 
-        {   id: 1,  title: 'Fundamentos de java' },
-        {   id: 2,  title: 'Fundamentos de java con dibujos' },
-        {   id: 3,  title: 'Curso de actulización' },
-        {   id: 4,  title: 'Fundamentos de java con dibujos' },
-        {   id: 5,  title: 'Fundamentos de PHP con diagramas de flujo' },
-    ]
 
     const [search, setSearch] = useState('');
 
     const handleChange = (e) => {
         setSearch(e.target.value);
     }
-
-    //console.log('post', posts)
-    //console.log('subCategories', subCategories)
-    //console.log('categories', category)
 
     return (
         <Section>
@@ -31,7 +20,7 @@ const CategorySection = ({subCategories, posts, category}) => {
                     {
                         subCategories != undefined ? (
                             <CategoryTagContainer>
-                            <h2>Contenido</h2>
+                            <ContentTitle>Contenido</ContentTitle>
                                 <CaregoryTagList>
                                 { subCategories.map((el) => {
                                     return (
@@ -155,6 +144,10 @@ const CaregoryTagList = styled.div`
     grid-gap: 1.5rem 1rem;
 `
 
+const ContentTitle = styled.h2`
+    color: ${props => props.theme.colors.mediumGray}!important;
+    `
+
 const TagItem = styled.div`
     display: flex;
     align-items: center;
@@ -162,12 +155,13 @@ const TagItem = styled.div`
 `
 
 const TagTitle = styled.a`
-    color: #707070;
+    color: ${props => props.theme.colors.fontMedium};
     font-size: 1rem;
     //background: #707070;
 `
 
 const PostSection = styled.div`
+    color: ${props => props.theme.mediumFont};
     margin-top: 1rem;
 `
 
@@ -184,6 +178,8 @@ const Search = styled.input`
     width: 100%;
     margin-left: 10px;
     font-size: 1rem;
+    background-color: transparent;
+    color: ${props => props.theme.fontColor};
     svg{
         font-size: 1.2rem!important;
         width: 1.2rem;
@@ -208,7 +204,7 @@ const PostItem = styled.a`
     margin-bottom: 0px;
     border-bottom: 1px solid #cbc8c8;
     &:hover{
-        background: #f5f5f5;
+        background: ${props => props.theme.hoverList};
         border-left: 5px solid #c5c5c5;
     }
 `
@@ -220,7 +216,7 @@ const PostDescription = styled.div`
 
 const PostTitle = styled.a`
     font-size: 1rem;
-    color: #707070;
+    color: ${props => props.theme.colors.fontMedium};
     font-weight: 600;
 `
 
@@ -230,7 +226,7 @@ const PostInfo = styled.div`
 `
 
 const PostDate = styled.span`
-    color: #707070;
+    color: ${props => props.theme.colors.gray};
     font-size: 0.8rem;
     display: flex;
     align-items: center;
