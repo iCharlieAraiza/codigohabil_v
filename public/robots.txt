@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://codigohabil.com
+
+# Sitemaps
+Sitemap: https://codigohabil.com/sitemap.xml
