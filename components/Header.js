@@ -15,7 +15,7 @@ import { FaRegMoon } from 'react-icons/fa';
 const Header = () => {
 
     const [isMounted, setIsMounted] = useState(false)
-    const darkMode = useDarkMode(true)
+    const darkMode = useDarkMode()
     const theme = darkMode.value ? darkTheme : lightTheme
     const toggleTheme = () => {
         if(darkMode.value){

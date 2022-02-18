@@ -26,7 +26,7 @@ const light = {
   }
   
   const dark = {
-    bg: "#262f40",
+    bg: "#121720",
     colors:{
       fontMedium: '#d0d0d0',
       gray: '#d0d0d0',

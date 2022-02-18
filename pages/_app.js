@@ -13,7 +13,7 @@ export default function App({
 }) {
   const [isMounted, setIsMounted] = useState(false)
   const darkMode = useDarkMode(true)
-  const theme = darkMode.value ? darkTheme : lightTheme
+  const theme = darkMode.value ? lightTheme : darkTheme  
 
   useEffect(() => {
     setIsMounted(true)
