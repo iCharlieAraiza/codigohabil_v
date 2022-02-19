@@ -37,7 +37,7 @@ const BreadcrumbItem = styled.li`
     }
 
     &:last-child {
-        color: ${ props => props.theme.colors.gray };
+        color: var(--color-gray);
     }
 
     &:after {

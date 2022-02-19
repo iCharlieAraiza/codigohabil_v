@@ -145,7 +145,7 @@ const CaregoryTagList = styled.div`
 `
 
 const ContentTitle = styled.h2`
-    color: ${props => props.theme.colors.mediumGray}!important;
+    color: var(--color-medium-gray)!important;
     `
 
 const TagItem = styled.div`
@@ -155,13 +155,13 @@ const TagItem = styled.div`
 `
 
 const TagTitle = styled.a`
-    color: ${props => props.theme.colors.fontMedium};
+    color: var(--font-medium);
     font-size: 1rem;
     //background: #707070;
 `
 
 const PostSection = styled.div`
-    color: ${props => props.theme.mediumFont};
+    color: var(--medium-font);
     margin-top: 1rem;
 `
 
@@ -179,7 +179,7 @@ const Search = styled.input`
     margin-left: 10px;
     font-size: 1rem;
     background-color: transparent;
-    color: ${props => props.theme.fontColor};
+    color: var(--font-color);
     svg{
         font-size: 1.2rem!important;
         width: 1.2rem;
@@ -204,7 +204,7 @@ const PostItem = styled.a`
     margin-bottom: 0px;
     border-bottom: 1px solid #cbc8c8;
     &:hover{
-        background: ${props => props.theme.hoverList};
+        background: var(--hover-list);
         border-left: 5px solid #c5c5c5;
     }
 `
@@ -216,7 +216,7 @@ const PostDescription = styled.div`
 
 const PostTitle = styled.a`
     font-size: 1rem;
-    color: ${props => props.theme.colors.fontMedium};
+    color: var(--font-medium);
     font-weight: 600;
 `
 
@@ -226,7 +226,7 @@ const PostInfo = styled.div`
 `
 
 const PostDate = styled.span`
-    color: ${props => props.theme.colors.gray};
+    color:var(--color-gray);
     font-size: 0.8rem;
     display: flex;
     align-items: center;

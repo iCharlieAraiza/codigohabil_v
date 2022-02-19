@@ -29,7 +29,7 @@ const BannerCategory = ({props}) => {
 
 const BannerSection = styled.section`
     background: rgb(0,0,0);
-    background: ${props => props.theme.headerGradient};    
+    background: var(--header-gradient);    
     margin-top: 2.5rem;
     min-height: 5rem;
     color: #535353;
@@ -57,11 +57,11 @@ const ImgContainer = styled.div`
 const Title = styled.h1`
     margin: 0;
     font-size: 1.8rem;
-    color: ${ props => props.theme.title };
+    color: var(--title);
 `
 
 const Description = styled.div`
-    color: ${ props => props.theme.colors.gray };
+    color: var(--color-gray);
 `
 
 export default BannerCategory

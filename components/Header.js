@@ -27,6 +27,8 @@ const Header = () => {
         }
     }
 
+    console.log("darkmode", darkMode.value)
+
     const [isDarkMode, setIsDarkMode] = useState( () => false );
 
     useEffect(() => {
@@ -110,7 +112,7 @@ const HeaderContainer = styled.header`
     justify-content: space-between;
     align-self: center;
     padding: 0 1rem;
-    background-color: ${props => props.theme.menu};
+    background-color: var(--menu)!important;
     color: #fff;
     position: fixed;
     width: 100%;

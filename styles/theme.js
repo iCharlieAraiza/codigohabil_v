@@ -35,11 +35,11 @@ const light = {
       titlePost: 'white'
     },
     heroURL: 'https://assets.codigohabil.com/img/background-banner-dark.svg',
-    headerGradient:  'linear-gradient(180deg,rgb(102 102 102 / 40%) 0%,rgb(185 185 185 / 15%) 40%);',
+    headerGradient:  'linear-gradient(rgb(71 71 71 / 0%) 0%, rgb(185 185 185 / 5%) 40%);',
     hoverList: 'rgb(255 255 255 / 6%);',
     fontColor: 'white',
     menu: "#394256",
-    mediumFont: 'white',
+    mediumFont: '#d0d0d0',
     overlayer: '#2c3546;',
     title: 'white',
     toc:{

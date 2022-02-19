@@ -149,7 +149,7 @@ const PostSection = ({post}) => {
 }
 
 const Post = styled.article`
-    background: ${props => props.theme.bg};
+    background: var(--bg);
     margin-top: 1rem;
     padding-bottom: 2rem;
 
@@ -161,11 +161,11 @@ const Post = styled.article`
         font-family: 'IBM Plex Serif', serif;
         line-height: 32px;
         font-size: 18px;
-        color: ${props => props.theme.colors.p};
+        color: var(--color-p);
     }
 
     h2, h3, h4{
-        color: ${props => props.theme.colors.h};
+        color: var(--color-h);
         margin: 0;
         margin-top: 2rem;
         margin-bottom: 1rem;
@@ -225,7 +225,7 @@ const Post = styled.article`
     }
 
     p, li{
-        color: ${props => props.theme.colors.p};
+        color: var(--color-p);
     }
 
     .question-container{
@@ -263,7 +263,7 @@ const Title = styled.h1`
     margin: 0;
     font-weight: 700;
     line-height: 1.2;
-    color: ${props => props.theme.colors.title};
+    color: var(--color-title-post);
     @media (min-width:600px) { 
         /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
         font-size: 2.75rem;

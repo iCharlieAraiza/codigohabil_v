@@ -27,7 +27,7 @@ const Banner = () => {
 }
 
 const BannerSection = styled.section`
-    background-image: url(${props => props.theme.heroURL});
+    background-image: var(--hero-url);
     background-size: cover;
     background-position: center;
     height: 100vh;

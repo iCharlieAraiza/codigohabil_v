@@ -7,6 +7,7 @@ import MainHomepage from '../components/MainHomepage'
 
 import { GET_ALL_CATEGORIES } from '../lib/wordpress/api'
 import fetcher from '../lib/fetcher'
+import Script from 'next/script'
 //import { useSession, signIn, signOut } from "next-auth/react"
 
 export default function Home({ categories, theme}) {
@@ -25,7 +26,7 @@ export default function Home({ categories, theme}) {
       <Banner />
       {/*Main*/}
       <MainHomepage categories={categories}/>
-
+      <Script src="noflash.js"  />
     </div>
   )
 }
