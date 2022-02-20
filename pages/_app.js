@@ -2,10 +2,10 @@ import { SessionProvider } from "next-auth/react"
 import '../styles/globals.css'
 import React, { useState, useEffect } from 'react'
 import useDarkMode from 'use-dark-mode'
-import { ThemeProvider } from 'styled-components'
+//import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from "../styles/theme"
 import { createGlobalStyle } from 'styled-components';
-import { ThemeProvider as TP} from 'next-themes'
+//import { ThemeProvider as TP} from 'next-themes'
 import css from '../styles/styles.js';
 
 export default function App({
@@ -14,11 +14,6 @@ export default function App({
 }) {
   const [isMounted, setIsMounted] = useState(false)
   const darkMode = useDarkMode(false)
-  let theme = !darkMode.value ? darkTheme : lightTheme;
-
-
-  console.log("darkmode", darkMode.value)
-
 
   useEffect(() => {
     setIsMounted(true)
@@ -61,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
     --hero-url: url('https://assets.codigohabil.com/img/background-banner.svg');
     --hover-list: #f5f5f5;
     --menu: ${css.colors.primary};
-    --medium-font: #d0d0d0;
+    --medium-font: #707070;
     --overlayer: 'white';
     --title: #2e2e2e;
     --toc-bg: rgb(240, 242, 243);
