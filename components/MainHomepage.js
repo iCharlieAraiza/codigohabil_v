@@ -10,6 +10,8 @@ const MainHomepage = ({categories, theme}) => {
         return el.node.parent.node
     })
 
+    console.log('Categories', categories)
+
     categoriesData.sort((a, b) => {
         if(a.count > b.count) return -1;
         if(a.count < b.count) return 1;
