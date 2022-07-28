@@ -6,6 +6,9 @@ import Link from 'next/link';
 
 const MainHomepage = ({categories, theme}) => { 
     //console.log("categories", categories[0].node.parent.node.categoryInfo.logo)
+    
+   const categoriesSet = new Set();
+    
     const categoriesData = categories.map((el) => {
         return el.node.parent.node
     })
@@ -41,6 +44,10 @@ const MainHomepage = ({categories, theme}) => {
                                 return el.name.toLowerCase().includes(search.toLowerCase())
                             }   
                         ).map((el) => {
+                            if(categoriesSet.has(el.name)) {
+                                return null;
+                            }
+                            categoriesSet.add(el.name);
                             return (
                                 <Link href={`/paths/${el.slug}`} key={el.id}>
                                     <Card>

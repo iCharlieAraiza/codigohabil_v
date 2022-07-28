@@ -108,6 +108,15 @@
   margin-left: 0.5rem;
 }
 
+.flex {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  padding: 0.5rem;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
