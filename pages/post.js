@@ -60,7 +60,7 @@ const Post = ({post}) => {
 
                     if(node.tagName ==='h3'){
                         //console.log("H3 tag", node.children[0])
-                        if(node.children[0].value != undefined){
+                        if(node.children[0]?.value != undefined){
                             const id = parameterize(node.children[0].value)
                             node.properties = {id: id};
                             toc.push({
