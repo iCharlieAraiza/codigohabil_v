@@ -216,7 +216,7 @@ export const Section = styled.section`
     line-height: 1.5;
   }
   &.about-section {
-    background-color: #eff4f9;
+    background-color: var(--section-landing-bg: #eff4f9);
   }
 `;
 
@@ -257,6 +257,7 @@ export const BtnLabel = styled.div`
   border-radius: 5px;
   fonr-size: 0.9em;
   height: 40px;
+  color:  #202020;
   span {
     display: none;
   }
