@@ -62,6 +62,9 @@ const GlobalStyle = createGlobalStyle`
     --toc-bg: rgb(240, 242, 243);
     --toc-title: #2e2e2e;
     --toc-li: #7c7c7c;
+
+    --section-landing-bg: #eff4f9;
+
   }
 
   [data-theme="dark"], .dark-mode {
@@ -84,6 +87,10 @@ const GlobalStyle = createGlobalStyle`
     --toc-bg: rgb(57 66 86 / 44%);
     --toc-title: #fff;
     --toc-li: #d0d0d0;
+
+
+    --section-landing-bg: #transparent;
+
   }
 
   body {

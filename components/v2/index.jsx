@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import About from "./About";
-import Categories from "./Categories";
+import Topics from "./Topics";
 
-export {Navbar, Hero, About, Categories}
+export { Navbar, Hero, About, Topics }

@@ -1,15 +1,26 @@
 import React from 'react'
-import { Navbar, Hero, About, Categories} from '../components/v2'
+import { Navbar, Hero, About, Topics} from '../components/v2'
 
-const homepage = () => {
+export default function homepage ({props}) {
+  console.log(props)
   return (
     <>
         <Navbar />
         <Hero />
         <About />
-        <Categories />
+        {
+          /*
+            <Topics />
+          */
+        }
     </>
   )
 }
 
-export default homepage
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const data = {done: true}
+
+  // Pass data to the page via props
+  return { props: { data } }
+}

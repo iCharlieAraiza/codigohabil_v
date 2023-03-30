@@ -1,15 +1,14 @@
 import React from 'react'
-import {Section, Container, HeaderH2, FeaturedLabel, DisplayParagraph} from './General'
+import {Section, Container, HeaderH2, Underline} from './General'
 
 const About = () => {
   return (
-    <Section>
+    <Section className='about-section'>
       <Container>
-        <HeaderH2>
-          ¿Qué es CódigoHábil?
+        <HeaderH2 className='circle-title'>
+          ¿Qué es <Underline>código hábil</Underline>?
         </HeaderH2> 
-        <p>CódigoHábil.com es un portal en español de recursos de programación. ¡Totalente de código abirto y gratuito!</p>
-        <p>Aquí encontrarás tutoriales, cursos, pruebas técnicas y mucho más. Solo tienes que elegir el tema que te interese y ¡listo!</p>
+        <p>Es un portal de recursos de programación en español. ¡Totalmente gratuito y de código abierto! Aquí encontrarás <b>tutoriales</b>, <b>cursos</b> y <b>mucho más</b>. Solo elige el tema que te interese y ¡listo!</p>
       </Container>
     </Section>
   )
