@@ -4,7 +4,13 @@ import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 import MainHomepage from '../components/MainHomepage'
-import { Topics, Navbar, Hero, About } from '../components/V2'
+//import { Topics, Navbar, Hero, About } from '../components/V2'
+import Topics from '../components/V2/Topics'
+import Navbar from '../components/V2/Navbar'
+import Hero from '../components/V2/Hero'
+import About from '../components/V2/About'
+
+
 
  
 import { GET_ALL_CATEGORIES } from '../lib/wordpress/api'
