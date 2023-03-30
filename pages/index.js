@@ -6,6 +6,7 @@ import Banner from '../components/Banner'
 import MainHomepage from '../components/MainHomepage'
 //import { Topics, Navbar, Hero, About } from '../components/V2'
 
+import { Navbar, Hero, About, Topics} from '../components/v2'
 
  
 import { GET_ALL_CATEGORIES } from '../lib/wordpress/api'
@@ -23,9 +24,9 @@ export default function Home({ categories, theme}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
-      <Header />
-      <Banner />
+      <Navbar />
+      <Hero />
+      <About />
       <MainHomepage categories={categories}/> 
 
 
