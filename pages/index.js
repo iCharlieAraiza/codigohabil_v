@@ -29,8 +29,6 @@ export default function Home({ categories, theme}) {
       <About />
       <Topics categories={categories}/> 
 
-
-
         {/*
         <Navbar />
         <Hero />

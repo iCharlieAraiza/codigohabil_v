@@ -36,7 +36,7 @@ export const Nav = styled.nav`
     padding: 5px 0;
     border-bottom: 1px solid #727272;
     .logo-container {
-        width: 130px;
+      width: 130px;
     }
   }
   .d-flex {
@@ -87,19 +87,19 @@ export const MenuBtn = styled.button`
 `;
 
 export const DarkModeBtn = styled.button`
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    border-radius: 50%;
-    padding: 5px;
-    border: none;
-    color: white;
-    background-color: #52768173;
-    &:hover {
-        background-color: #606a8a;
-    }
-`
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  padding: 5px;
+  border: none;
+  color: white;
+  background-color: #52768173;
+  &:hover {
+    background-color: #606a8a;
+  }
+`;
 
 export const HeroContainer = styled.section`
   background-image: url(${HeroBg.src});
@@ -163,7 +163,9 @@ export const HeaderH2 = styled.h2`
         position: absolute;
         width: 60px;
         height: 60px;
-        background-color: #cde0e6;        border-radius: 50%;
+        //background-color: #cde0e6;  
+        background-color: #6090a040;     
+        border-radius: 50%;
         margin-left: -1rem;
         top: -20%;
         z-index: -1;
@@ -216,27 +218,25 @@ export const Section = styled.section`
     line-height: 1.5;
   }
   &.about-section {
-    background-color: var(--section-landing-bg: #eff4f9);
+    background-color: var(--section-landing-bg);
   }
 `;
 
 export const SearchContainer = styled.div`
   display: flex;
   align-items: center;
-  //box-shadow: 0px 3px 0px #cacaca;
   width: fit-content;
   width: 100%;
   max-width: 400px;
   border-radius: 5px;
-  border: 1px solid #f0f0f0;
-  border-bottom: 2px solid #c6c6c6;
-
+  border-bottom: 2px solid #afafafd1;
   input {
     border: none;
     padding: 7px;
     font-size: 1rem;
     width: 100%;
     background-color: transparent;
+    color: var(--font-color);
     &:focus {
       outline: none;
     }
@@ -252,12 +252,12 @@ export const BtnLabel = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #e6e6e6;
+  background-color: #e6e6e6eb;
   font-weight: 700;
   border-radius: 5px;
   fonr-size: 0.9em;
   height: 40px;
-  color:  #202020;
+  color: #202020;
   span {
     display: none;
   }
@@ -288,11 +288,14 @@ export const ResultItem = styled.li`
   gap: 1rem;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0px 0px 15px #e8e8e8d6;
-  border: 1px solid #f0f0f0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: var(--overlayer);
   height: 8rem;
   font-weight: 600;
   transition: all 0.2s ease-in-out 0s;
+  color: var(--medium-font);
+  font-size: 0.9em;
   a {
     display: flex;
   }
@@ -307,8 +310,9 @@ export const ResultItem = styled.li`
     text-align: center;
   }
   &:hover {
-    background-color: rgb(227 234 240);
-    transform: scale(1.05);
+    //background-color: rgb(227 234 240);
+    background-color: rgb(149 165 194 / 12%);
+    transform: scale(1.08);
   }
   @media (min-width: 768px) {
     height: 9rem;

@@ -11,6 +11,7 @@ import useDarkMode from 'use-dark-mode'
 import { lightTheme, darkTheme } from '../styles/theme.js';
 import { BsFillSunFill } from 'react-icons/bs';
 import { FaRegMoon } from 'react-icons/fa';
+import LogoSrc from '../assets/logo/codigohabil.svg';
 
 const Header = () => {
 
@@ -50,7 +51,7 @@ const Header = () => {
             <Link href={'/'}>
                 <Logo>
                     <img 
-                        src="https://assets.codigohabil.com/img/logo.png"
+                        src={LogoSrc.src}
                         alt="logo" />
                 </Logo>
             </Link>
@@ -134,7 +135,8 @@ const Logo = styled.a`
     display: flex;
     cursor: pointer;
     img{
-        height: 40px;
+        height: 50px;
+        padding: 11px;
     }
     @media (min-width:801px) { 
         img{

@@ -3,6 +3,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import styled from 'styled-components';
 import { FaUserAlt } from 'react-icons/fa';
 import { AiFillGithub, AiOutlineGoogle } from 'react-icons/ai';
+import { VscSignOut } from 'react-icons/vsc';
 
 export default function Login() {
     const { data: session } = useSession()
@@ -24,7 +25,7 @@ export default function Login() {
                 : session.user.email
             }
         </Username>
-        <LoginBtn onClick={() => signOut()}>Cerrar Sesión</LoginBtn>
+        <LoginBtn onClick={() => signOut()}> <VscSignOut/> </LoginBtn>
         
         </>
     )
@@ -59,11 +60,11 @@ export default function Login() {
 
 const LoginBtn = styled.div`
     background-color: transparent;
-    padding: 5px 1rem;
+    //padding: 5px 1rem;
     display: flex;
     align-items: center;
     font-size: 14px;
-    border: 1px solid #e1e1e1;
+    //border: 1px solid #e1e1e1;
     border-radius: 5px;
     margin-right: 5px;
     cursor: pointer;
@@ -74,6 +75,7 @@ const LoginBtn = styled.div`
 `
 const Username = styled.div`
     margin-right: 1rem;
+    font-sizre: 0.9em;
     svg{
         margin-right: 10px;
     }

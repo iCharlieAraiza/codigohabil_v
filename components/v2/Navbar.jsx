@@ -6,6 +6,7 @@ import Logo from "../../assets/logo/codigohabil.svg";
 import useDarkMode from 'use-dark-mode'
 import { BsFillSunFill } from 'react-icons/bs';
 import { FaRegMoon } from 'react-icons/fa';
+import Login from "../auth/Login";
 
 
 const Navbar = () => {
@@ -41,7 +42,9 @@ const Navbar = () => {
               </DarkModeBtn>
             )}
           </li>
-          <li className="signin-btn">Iniciar sesión</li>
+          <li className="signin-btn">
+            <Login />
+          </li>
         </NavList>
         <MenuBtn>Menu</MenuBtn>
       </Container>
