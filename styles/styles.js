@@ -1,6 +1,6 @@
 const css = {
     colors:{
-        primary: '#7D9091',
+        primary: '#394960',
         dark: '#283940',
     }
 }

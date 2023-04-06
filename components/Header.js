@@ -150,7 +150,7 @@ const SearchActiveBtn = styled.div`
     margin-left: auto;
     color: #fff;
     cursor: pointer;
-    font-size: 1.2rem;
+    //font-size: 1.2rem;
 `
 
 
@@ -163,8 +163,9 @@ const SearchContainer = styled.div`
     max-width: 210px;
 
     svg {
-        height: 20px;
-        width: 20px;
+        font-size: 18px;
+        //height: 20px;
+        //width: 20px;
     }
 
     @media (min-width:801px) { 
