@@ -9,7 +9,6 @@ import { visit } from 'unist-util-visit'
 import parameterize from 'parameterize'
 import Link from 'next/link'
 import Script from 'next/script'
-import { Navbar } from '../components/V2'
 /*
     Todo: 
     [] - Fix TOC styling
