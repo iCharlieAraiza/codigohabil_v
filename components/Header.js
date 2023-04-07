@@ -119,7 +119,7 @@ const HeaderContainer = styled.header`
     width: 100%;
     top: 0;
     z-index: 10;
-    
+    padding: 2px 1rem;
     .width-animation {
         transition: width 0.4s ease-in-out;
         width:100%;
@@ -135,21 +135,23 @@ const Logo = styled.a`
     display: flex;
     cursor: pointer;
     img{
-        height: 50px;
-        padding: 11px;
+        //height: 50px;
+        width: 130px;
+        padding: 11px 0;
     }
     @media (min-width:801px) { 
         img{
-            height: 50px;
+            //height: 50px;
         }
     }
 `
 
 const SearchActiveBtn = styled.div`
-    display: block; 
     margin-left: auto;
     color: #fff;
     cursor: pointer;
+    display: flex;
+    align-items: center;
     //font-size: 1.2rem;
 `
 
@@ -163,7 +165,7 @@ const SearchContainer = styled.div`
     max-width: 210px;
 
     svg {
-        font-size: 18px;
+        font-size: 22px;
         //height: 20px;
         //width: 20px;
     }
