@@ -126,6 +126,7 @@ export const HeroContainer = styled.section`
     max-width: 200px;
     box-shadow: 0px 0px 30px #316473;
     border-radius: 28px;
+    animation: fadeInUp 3s;
   }
   @media (min-width: 768px) {
     .info-container {
@@ -144,6 +145,7 @@ export const HeaderH1 = styled.h1`
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  animation: fadeInDown 1s forwards;
   @media (min-width: 768px) {
     font-size: 45px;
     justify-content: flex-start;
@@ -288,7 +290,7 @@ export const ResultItem = styled.li`
   gap: 1rem;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+  //box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   background-color: var(--overlayer);
   height: 8rem;
@@ -296,6 +298,7 @@ export const ResultItem = styled.li`
   transition: all 0.2s ease-in-out 0s;
   color: var(--medium-font);
   font-size: 0.9em;
+  box-shadow: 0 0 18px #39496038;
   a {
     display: flex;
   }
