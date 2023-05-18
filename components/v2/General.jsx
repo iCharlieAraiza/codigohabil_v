@@ -294,11 +294,12 @@ export const ResultItem = styled.li`
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   background-color: var(--overlayer);
   height: 8rem;
-  font-weight: 600;
+  //font-weight: 600;
   transition: all 0.2s ease-in-out 0s;
   color: var(--medium-font);
-  font-size: 0.9em;
-  box-shadow: 0 0 18px #39496038;
+  font-size: 0.93em;
+  border: 1px solid #e6e6e6;
+  //box-shadow: 0 0 18px #39496038;
   a {
     display: flex;
   }

@@ -142,7 +142,8 @@ const TagItem = styled.div`
   cursor: pointer;
   padding: 9px;
   border-radius: 5px;
-  box-shadow: 0px 0px 4px #c8c8c8;
+  //box-shadow: 0px 0px 4px #c8c8c8;
+  border: 1px solid #dbdbdb;
   &.active {
     background: #f2f2f2;
   }

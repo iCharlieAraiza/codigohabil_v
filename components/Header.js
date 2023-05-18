@@ -165,7 +165,7 @@ const SearchContainer = styled.div`
     max-width: 210px;
 
     svg {
-        font-size: 24px;
+        font-size: 26px;
         //height: 20px;
         //width: 20px;
     }
