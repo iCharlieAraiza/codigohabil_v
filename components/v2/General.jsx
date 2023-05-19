@@ -31,6 +31,13 @@ export const Nav = styled.nav`
   padding: 10px 0;
   z-index: 100;
   transition: all 0.3s ease-in-out;
+  @media (min-width: 1400px) {  
+    .nav-width {
+      max-width: 1450px;
+    }
+  }
+
+
   &.scrolled {
     background-color: #394960;
     padding: 5px 0;
@@ -149,6 +156,17 @@ export const HeaderH1 = styled.h1`
   @media (min-width: 768px) {
     font-size: 45px;
     justify-content: flex-start;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: #738293;
+      border-radius: 50%;
+      top: 5px;
+      z-index: -1;
+      left: -12px;
+    }
   }
   @media (min-width: 1524px) {
     font-size: 48px;

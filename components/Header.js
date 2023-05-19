@@ -119,7 +119,7 @@ const HeaderContainer = styled.header`
     width: 100%;
     top: 0;
     z-index: 10;
-    padding: 2px 1rem;
+    padding: 0px 1rem;
     .width-animation {
         transition: width 0.4s ease-in-out;
         width:100%;

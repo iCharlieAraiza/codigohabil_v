@@ -126,8 +126,10 @@ const CategoryTagContainer = styled.div`
 `;
 
 const CaregoryTagList = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  //grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1.5rem 1rem;
 `;
 
@@ -140,12 +142,16 @@ const TagItem = styled.div`
   align-items: center;
   grid-column: span 1;
   cursor: pointer;
-  padding: 9px;
+  padding: 9px 1rem;
   border-radius: 5px;
   //box-shadow: 0px 0px 4px #c8c8c8;
   border: 1px solid #dbdbdb;
+  &:hover {
+    border: 1px solid #58b19c;
+  }
   &.active {
-    background: #f2f2f2;
+    background: #f2f2f28a;
+    color: var(--fg);
   }
 `;
 

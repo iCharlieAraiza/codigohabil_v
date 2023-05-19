@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
   return (
     <Nav>
-      <Container className="d-flex">
+      <Container className="d-flex nav-width">
         <Link href="/">
           <a className="logo-container">
             <Image src={Logo} width="150px" alt="logo" />
