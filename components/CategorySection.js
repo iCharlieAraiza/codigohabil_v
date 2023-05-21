@@ -147,10 +147,11 @@ const TagItem = styled.div`
   //box-shadow: 0px 0px 4px #c8c8c8;
   border: 1px solid #dbdbdb;
   &:hover {
-    border: 1px solid #58b19c;
-  }
+    border: 1px solid rgb(127 153 192);
+    }
   &.active {
     background: #f2f2f28a;
+    border: 1px solid rgb(127 153 192);
     color: var(--fg);
   }
 `;

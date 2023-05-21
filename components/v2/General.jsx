@@ -249,6 +249,8 @@ export const SearchContainer = styled.div`
   width: 100%;
   max-width: 400px;
   border-radius: 5px;
+  font-size: 0.85em;
+  background-color: #fafafa;
   border-bottom: 2px solid #afafafd1;
   input {
     border: none;
