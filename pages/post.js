@@ -61,15 +61,15 @@ const Post = ({post}) => {
                     if(node.tagName ==='h3'){
                         //console.log("H3 tag", node.children[0])
                         if(node.children[0]?.value != undefined){
-                            const id = parameterize(node.children[0].value)
-                            node.properties.id = id    
-                            console.log('component', node)
                             let tagValue = ''
                             for(let i = 0; i < node.children.length; i++){
                                 if(node.children[i].value != undefined){
                                     tagValue += node.children[i].value
                                 }
                             }
+                            const id = parameterize(tagValue)
+                            node.properties.id = id    
+                            console.log('component', node.properties)
 
                             toc.push({
                                 id,
