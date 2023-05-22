@@ -233,6 +233,9 @@ export const Underline = styled.span`
 
 export const Section = styled.section`
   padding: 4rem 0;
+  &.vh-70 {
+    min-height: 70vh;
+  }
   p {
     font-size: 20px;
     line-height: 1.5;

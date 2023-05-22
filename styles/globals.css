@@ -20,13 +20,17 @@ a {
   text-decoration: none;
 }
 
-h1,h2,h3,h4,h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
   /*letter-spacing: -0.5px;*/
 }
 
-article p{
+article p {
   font-family: 'IBM Plex Serif', serif;
   font-size: 18px;
   color: rgb(58, 61, 61);
@@ -34,7 +38,7 @@ article p{
   line-height: 1.7;
 }
 
-.post img{
+.post img {
   max-width: 100%;
 }
 
@@ -43,13 +47,15 @@ article p{
 }
 
 
-.container, .container-narrow, .container-post{
+.container,
+.container-narrow,
+.container-post {
   margin: 0 auto;
   width: 100%;
   padding: 0 1rem;
 }
 
-.container-post{
+.container-post {
   max-width: 800px;
 }
 
@@ -59,46 +65,102 @@ article p{
   margin-bottom: 3rem;
 }
 
+.question-title {
+  font-size: 24px;
+  margin-bottom: 0;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 4px!important;
+}
 
-@media (min-width:320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
-@media (min-width:480px) { /* smartphones, Android phones, landscape iPhone */ }
-@media (min-width:600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
-@media (min-width:801px) { 
-  .container, .container-narrow{
+.question-title__number {
+  font-weight: 500;
+  font-style: italic;
+  border-radius: 50%;
+  font-size: 0.85em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(143, 143, 143);
+}
+
+.question__answer-tag {
+  margin-top: 1px;
+  font-family: 'Nunito Sans';
+  font-size: 18px;
+  width: fit-content;
+  line-height: initial;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+}
+
+.question__answer-tag::after {
+  content: '';
+  height: 5px;
+  width: 100%;
+  background-color: #aed8f4f7;
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  z-index: -1;
+}
+
+
+@media (min-width:320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+}
+
+@media (min-width:480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+
+@media (min-width:600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+
+@media (min-width:801px) {
+
+  .container,
+  .container-narrow {
     padding: 0 1rem;
   }
- }
-@media (min-width:1025px) { 
-  .container, .container-narrow{
+}
+
+@media (min-width:1025px) {
+
+  .container,
+  .container-narrow {
     padding: 0 1rem;
     max-width: 1140px;
   }
 }
 
-@media (min-width:801px){
-  .container{
+@media (min-width:801px) {
+  .container {
     max-width: 1320px;
   }
 }
 
 @keyframes fadeInDown {
   0% {
-      opacity: 0;
-      transform: translateY(-20px)
+    opacity: 0;
+    transform: translateY(-20px)
   }
 
   to {
-      transform: translateY(0);
-      opacity: 1
+    transform: translateY(0);
+    opacity: 1
   }
-} 
+}
 
 @keyframes fadeInUp {
   0% {
-      opacity: 0
+    opacity: 0
   }
 
   to {
-      opacity: 1
+    opacity: 1
   }
 }

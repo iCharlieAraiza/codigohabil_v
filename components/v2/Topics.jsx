@@ -32,7 +32,7 @@ const Topics = ({ categories }) => {
   });
 
   return (
-    <Section>
+    <Section className="vh-70">
       <Container>
         <HeaderH2>Busca por tema de interés</HeaderH2>
         <SearchContainer>
