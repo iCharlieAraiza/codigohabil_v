@@ -10,6 +10,8 @@ const post = ({ postData }) => {
   const post = postData.data.post;
   //console.log(post.seo.fullHead);  
 
+  {!post && <div>Loading…</div>}
+
   return (
     <>
         <Head>

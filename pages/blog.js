@@ -6,6 +6,9 @@ import Link from 'next/link'
 const Blog = ({ allPosts }) => { 
     const posts = allPosts;
     //console.log(posts);
+
+    {!posts && <div>Loading…</div>}
+
     return (
         <div>
             <h1>Blog</h1>
