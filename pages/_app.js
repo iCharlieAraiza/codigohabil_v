@@ -25,7 +25,7 @@ export default function App({
     
     <SessionProvider session={session}>
         <GlobalStyle />
-        {isMounted && <Component {...pageProps} />}
+        <Component {...pageProps} />
     </SessionProvider>
   )
 
