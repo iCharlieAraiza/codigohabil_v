@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 const prism = require("prismjs")
 require('prismjs/components/prism-java');
+require('prismjs/components/prism-javascript');
+require('prismjs/components/prism-jsx');
+
 
 import moment from "moment";
 
@@ -20,6 +23,12 @@ const PostSection = ({post}) => {
 
     useEffect(() => {
         prism.highlightAll();
+
+
+        let num = 1;
+        const count = document.querySelectorAll('.question-title__number');
+        count.forEach(el => el.textContent = num++)
+
     }, []);
     
     useEffect(() => {

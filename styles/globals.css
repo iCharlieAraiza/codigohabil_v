@@ -84,6 +84,15 @@ article p {
   color: rgb(143, 143, 143);
 }
 
+.question-title__number::after {
+  content: '►';
+  color: #aebacb;
+  font-style: initial;
+  font-size: 0.5em;
+  margin-left: 10px;
+}
+
+
 .question__answer-tag {
   margin-top: 1px;
   font-family: 'Nunito Sans';
