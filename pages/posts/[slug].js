@@ -36,7 +36,7 @@ export async function getStaticPaths() {
   const allPosts = response.data.posts.nodes;
   return {
     paths: allPosts.map(post => `/posts/${post.slug}`),
-    fallback: true,
+    fallback: false,
     }
 }
 

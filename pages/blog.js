@@ -31,7 +31,7 @@ export default Blog
 export async function getStaticProps() {
     const response  = await fetcher(ALL_POSTS);
 
-    const allPosts = response.data.posts.nodes;
+    const allPosts = response?.data?.posts?.nodes;
 
     return {
         props: {allPosts},
