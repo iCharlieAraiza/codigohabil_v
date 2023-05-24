@@ -13,6 +13,7 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 
 
 const PostSection = ({post}) => {
+    const catEmoji = null//post.categories.nodes[0]?.categoryInfo?.emoji
     const title =  post.title;
     const date = post.date;
     const content = post.content;
@@ -42,7 +43,9 @@ const PostSection = ({post}) => {
 
     return (
         <Post className='container-post post'>        
-            <IconTitle>☕️</IconTitle>
+            {
+                catEmoji && <IconTitle>{catEmoji}</IconTitle>
+            }
             <Title>{title}</Title>
             <SubTitle>{subtitle}</SubTitle>
             <PostHeaderContainer>

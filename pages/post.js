@@ -9,7 +9,9 @@ import { visit } from 'unist-util-visit'
 import parameterize from 'parameterize'
 import Link from 'next/link'
 import Script from 'next/script'
+import {AiOutlineUnorderedList} from 'react-icons/ai'
 /*
+
     Todo: 
     [] - Fix TOC styling
     [] - Complete TOC functionality
@@ -18,6 +20,8 @@ import Script from 'next/script'
 
 const Post = ({post}) => {
     const toc = [];
+
+    console.log("Post object", post);
 
     useEffect(() => {
         const onScroll = () => {
@@ -69,8 +73,6 @@ const Post = ({post}) => {
                             }
                             const id = parameterize(tagValue)
                             node.properties.id = id    
-                            console.log('component', node.properties)
-
                             toc.push({
                                 id,
                                 title: tagValue,
@@ -107,12 +109,13 @@ const Post = ({post}) => {
             <Sidebar>
                 {tocHTML.length > 0 ? (
                     <TOC>
-                        <TitleTOC>Tabla de contenidos</TitleTOC>
+                        <TitleTOC>
+                            <AiOutlineUnorderedList/>
+                            Tabla de contenidos</TitleTOC>
                         <ListTOC>
                             {
                                 toc.map(( el ) => {
                                     const active = el.active ? 'active' : '';
-                                    console.log(active)
                                     return(
                                         <li key={el.id} className={el.type}>
                                             <Link href={`#${el.id}`} >
@@ -165,14 +168,20 @@ const TOC = styled.div`
     position: sticky;
     top: 4rem;
     background-color: var(--toc-bg);    
+    max-height: 85vh;
+    overflow: auto;
 `
 
 const TitleTOC = styled.h3`
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: var(--toc-title);
     text-transform: uppercase;
+    svg {
+        font-size: 12px;
+        margin-right:10px;
+    }
 `
 
 const ListTOC = styled.ul`
