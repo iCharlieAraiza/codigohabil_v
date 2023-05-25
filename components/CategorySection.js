@@ -148,7 +148,7 @@ const TagItem = styled.div`
   border: 1px solid #dbdbdb;
   &:hover {
     border: 1px solid rgb(127 153 192);
-    }
+  }
   &.active {
     background: #f2f2f28a;
     border: 1px solid rgb(127 153 192);
@@ -169,11 +169,12 @@ const PostSection = styled.div`
 
 const SearchContainer = styled.div`
   display: flex;
-  padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 5px;
+  padding: 10px 15px;
+  box-shadow: rgb(0 0 0 / 5%) 0px 1px 15px;
+  border-radius: 20px;
   max-width: 920px;
-  margin: 1rem auto 2rem auto;
+  margin: 1rem auto 2rem;
+  border: 1px solid #c3c3c3;
 `;
 const Search = styled.input`
   border: none;
