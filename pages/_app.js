@@ -73,10 +73,10 @@ const GlobalStyle = createGlobalStyle`
     --color-gray: #d0d0d0;
     --color-title-post: white;
     --color-medium-gray: white;
-    --color-p: #d0d0d0;
+    --color-p: #ffffff;
     --color-h: white;
     --font-color:  #fff;
-    --font-medium: #d0d0d0;
+    --font-medium: #fff;
     --header-gradient: linear-gradient(rgb(71 71 71 / 0%) 0%, rgb(185 185 185 / 5%) 40%);
     --hero-url: url('https://assets.codigohabil.com/img/background-banner-dark.svg');
     --hover-list: rgb(255 255 255 / 6%);

@@ -174,7 +174,7 @@ const SearchContainer = styled.div`
   border-radius: 20px;
   max-width: 920px;
   margin: 1rem auto 2rem;
-  border: 1px solid #c3c3c3;
+  border: 1px solid rgb(212 212 212);
 `;
 const Search = styled.input`
   border: none;
