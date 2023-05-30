@@ -69,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
 
   [data-theme="dark"], .dark-mode {
     --fg: #fff;
-    --bg: #121720;
+    --bg: #1f232b;
     --color-gray: #d0d0d0;
     --color-title-post: white;
     --color-medium-gray: white;

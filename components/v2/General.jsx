@@ -31,12 +31,11 @@ export const Nav = styled.nav`
   padding: 10px 0;
   z-index: 100;
   transition: all 0.3s ease-in-out;
-  @media (min-width: 1400px) {  
+  @media (min-width: 1400px) {
     .nav-width {
       max-width: 1450px;
     }
   }
-
 
   &.scrolled {
     background-color: #394960;
@@ -343,5 +342,43 @@ export const ResultItem = styled.li`
   }
   @media (min-width: 768px) {
     height: 9rem;
+  }
+`;
+
+export const CheatsheetComponent = styled.article`
+  margin-top: 5rem;
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    margin-bottom: 0rem;
+    font-weight: 400;
+    &::before {
+      content: "#";
+      font-weigth: 700;
+      margin-right: 10px;
+    }
+  }
+
+  .cheatsheet-header {
+    background: #52698b;
+    color: white;
+    font-size: 1.1rem;
+    padding: 7px 18px;
+  }
+  .three-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+  }
+  .content-block {
+    padding: 0 10px;
   }
 `;
