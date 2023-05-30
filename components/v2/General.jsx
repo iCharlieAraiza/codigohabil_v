@@ -365,6 +365,16 @@ export const CheatsheetComponent = styled.div`
     }
   }
 
+  p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  pre {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .cheatsheet-block {
     box-shadow: 0px 0px 26px #e6e6e6;
     padding-bottom: 1rem;

@@ -30,6 +30,10 @@ h5 {
   /*letter-spacing: -0.5px;*/
 }
 
+br {
+  display: none;
+}
+
 code {
   background-color: #eaeaead1;
   color: red;
@@ -116,7 +120,7 @@ pre {
 
 .question__answer-tag {
   margin-top: 1px;
-  font-family: 'Nunito Sans';
+  font-family: 'Nunito Sans', sans-serif!important;
   font-size: 18px;
   width: fit-content;
   line-height: initial;
