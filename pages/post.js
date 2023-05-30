@@ -10,6 +10,7 @@ import parameterize from "parameterize";
 import Link from "next/link";
 import Script from "next/script";
 import { AiOutlineUnorderedList } from "react-icons/ai";
+import Cheatsheet from "../components/v2/Cheatsheet";
 /*
 
     Todo: 
@@ -105,6 +106,15 @@ const Post = ({ post }) => {
   });
 
   //console.log( tocHTML)
+
+  if (post.typeOfPost?.typeOfPost === "Cheatsheet") {
+    return (
+      <Main>
+        <Header />
+        <Cheatsheet post={post} />
+      </Main>
+    );
+  }
 
   return (
     <Main>

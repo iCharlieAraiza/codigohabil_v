@@ -40,7 +40,6 @@ const PostSection = ({post}) => {
         //const minutes = Math.ceil(words / wpm);
     }, []);
 
-
     return (
         <Post className='container-post post'>        
             {

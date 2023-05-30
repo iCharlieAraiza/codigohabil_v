@@ -345,8 +345,8 @@ export const ResultItem = styled.li`
   }
 `;
 
-export const CheatsheetComponent = styled.article`
-  margin-top: 5rem;
+export const CheatsheetComponent = styled.div`
+  margin-top: 2rem;
   h1 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -356,7 +356,7 @@ export const CheatsheetComponent = styled.article`
   }
 
   h2 {
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
     font-weight: 400;
     &::before {
       content: "#";
@@ -365,7 +365,13 @@ export const CheatsheetComponent = styled.article`
     }
   }
 
+  .cheatsheet-block {
+    box-shadow: 0px 0px 26px #e6e6e6;
+    padding-bottom: 1rem;
+  }
+
   .cheatsheet-header {
+    margin-top: 0;
     background: #52698b;
     color: white;
     font-size: 1.1rem;
@@ -379,6 +385,6 @@ export const CheatsheetComponent = styled.article`
       grid-template-columns: repeat(3, 1fr);
   }
   .content-block {
-    padding: 0 10px;
+    padding: 0 1rem;
   }
 `;

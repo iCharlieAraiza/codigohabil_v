@@ -1,11 +1,26 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { CheatsheetComponent } from "./General";
+const prism = require("prismjs")
+require('prismjs/components/prism-java');
+require('prismjs/components/prism-javascript');
+require('prismjs/components/prism-jsx');
 
-const Cheatsheet = () => {
+const Cheatsheet = ({post}) => {
+    useEffect(() => {
+        prism.highlightAll();
+        let num = 1;
+        const count = document.querySelectorAll('.question-title__number');
+        count.forEach(el => el.textContent = num++)
+
+    }, []);
   return (
     <div className="container">
       <CheatsheetComponent>
-        <h1>📝 Hello World!</h1>
+        <h1>📝 {post?.title}</h1>
+
+        <article dangerouslySetInnerHTML={{__html: post.content}}>
+
+        </article>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius dolor quam, sit amet suscipit nisi egestas eget. Aliquam at purus a ante pellentesque eleifend. Sed eu tortor at lacus eleifend commodo. Donec id justo mattis, tincidunt lectus vitae, ultrices.</p>
 
         <h2>Modificar arrays</h2>
@@ -32,11 +47,6 @@ const Cheatsheet = () => {
                 Esta función combina dos arrays y lo regresa como un nuevo
                 array.
               </p>
-              <pre className="language-jsx" tabindex="0">
-                <code className="language-jsx">
-                  var hello = 'Hello, World'; console.log(hello);
-                </code>
-              </pre>
             </div>
           </div>
           <div className="cheatsheet-block">
