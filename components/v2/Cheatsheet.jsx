@@ -18,7 +18,7 @@ const Cheatsheet = ({post}) => {
       <CheatsheetComponent>
         <h1>📝 {post?.title}</h1>
 
-        <article dangerouslySetInnerHTML={{__html: post.content}}>
+        <article dangerouslySetInnerHTML={{__html: post?.content}}>
 
         </article>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius dolor quam, sit amet suscipit nisi egestas eget. Aliquam at purus a ante pellentesque eleifend. Sed eu tortor at lacus eleifend commodo. Donec id justo mattis, tincidunt lectus vitae, ultrices.</p>
