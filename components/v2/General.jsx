@@ -392,7 +392,7 @@ export const CheatsheetComponent = styled.div`
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 33%);
   }
   .content-block {
     padding: 0 1rem;
