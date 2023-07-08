@@ -211,7 +211,7 @@ const ListTOC = styled.ul`
     }
     &._h3 {
       color: #b4b4b4;
-      margin-left: 2rem;
+      margin-left: 1rem;
       font-size: 16px;
       &:before {
         content: "";
