@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 const prism = require("prismjs")
-require('prismjs/components/prism-java');
-require('prismjs/components/prism-javascript');
-require('prismjs/components/prism-jsx');
+require('prismjs/components/prism-java.min.js');
+require('prismjs/components/prism-javascript.min.js');
+require('prismjs/components/prism-jsx.min.js');
+require('prismjs/components/prism-css.min.js');
+require('prismjs/components/prism-scss.min.js');
 
 
 import moment from "moment";
