@@ -55,6 +55,7 @@ export async function getStaticProps() {
 
   //console.log(categories.data.categories)
   const el = categories.data.categories.edges.filter(cat => {
+    console.log(cat.node)
     return cat.node.parent != null
   })
 
