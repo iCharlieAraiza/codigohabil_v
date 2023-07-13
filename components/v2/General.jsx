@@ -249,7 +249,7 @@ export const SearchContainer = styled.div`
   align-items: center;
   width: fit-content;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 5px;
   font-size: 0.85em;
   background-color: #fafafa;
