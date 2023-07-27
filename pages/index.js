@@ -15,7 +15,6 @@ import Script from 'next/script'
 //import { useSession, signIn, signOut } from "next-auth/react"
 
 export default function Home({ categories, theme}) {
-  console.log(theme)
   return (
     <div>
       <Head>
@@ -52,10 +51,7 @@ export default function Home({ categories, theme}) {
 
 export async function getStaticProps() {
   const categories = await fetcher(GET_ALL_CATEGORIES)
-
-  //console.log(categories.data.categories)
   const el = categories.data.categories.edges.filter(cat => {
-    console.log(cat.node)
     return cat.node.parent != null
   })
 
