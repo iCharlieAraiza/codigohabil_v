@@ -14,6 +14,7 @@ export const Button = styled.button`
     border: 1px solid #DEDEDE;
     padding: 8px 20px;
     background-color: transparent;
+    color: var(----font-color);
 `
 
 export const RoundButton = styled(Button)`
