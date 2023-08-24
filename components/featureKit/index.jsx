@@ -55,7 +55,7 @@ export const Table = styled.table`
         padding: 10px;
     }
     th {
-        background-color: #F5F5F5;
+        background-color: rgba(229, 229, 229, 0.334);
         font-weight: 700;
         text-align: left;
         font-size: 14px;
