@@ -152,17 +152,18 @@ export const HeaderH1 = styled.h1`
   flex-wrap: wrap;
   justify-content: center;
   animation: fadeInDown 1s forwards;
+  letter-spacing: -0.9px;
   @media (min-width: 768px) {
-    font-size: 45px;
+    font-size: 50px;
     justify-content: flex-start;
     &:before {
       position: absolute;
       content: "";
-      width: 3.5rem;
-      height: 3.5rem;
+      width: 5rem;
+      height: 5rem;
       background-color: #738293;
       border-radius: 50%;
-      top: 5px;
+      top: -5px;
       z-index: -1;
       left: -12px;
     }
