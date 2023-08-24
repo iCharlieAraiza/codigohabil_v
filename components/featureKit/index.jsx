@@ -21,8 +21,8 @@ export const RoundButton = styled(Button)`
     border-radius: 17px;
     padding: 5px;
     border: none;
-    color: white;
-    background-color: #52768173;
+    color: #59797D;
+    background-color: #E3F0F2;
     padding: 8px 10px;
     &.grey {
         background-color: #e0e0e0;
@@ -35,6 +35,7 @@ export const Input = styled.input`
     font-size: 14px;
     width: 100%;
     box-sizing: border-box;
+    background: transparent;
     border-radius: 5px;
     border: 1px solid #C8C8C8;
 `
@@ -50,8 +51,22 @@ export const Label = styled.label`
 
 export const Table = styled.table`
     width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #C8C8C8;
+    border: 1px solid #C8C8C8!important;
+    border-radius: 7px!important;
+    overflow: hidden;
+    margin-top: 1rem;
+
+    &, th, tr {
+        border: 0px solid red;
+        border-collapse: collapse;
+    }
+
+    tr {
+        &:first-child {
+            border: 1px solid #C8C8C8;
+        }
+    }
+
     th, td {
         padding: 10px;
     }

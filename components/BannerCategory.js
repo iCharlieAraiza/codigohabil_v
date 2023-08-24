@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const BannerCategory = ({ props }) => {
-  const title = props.title == undefined ? "Work" : props.title;
-  const logo = props.logo;
+  const title = props?.title == undefined ? "Work" : props.title;
+  const logo = props?.logo;
   return (
     <BannerSection>
       <Container className="container-narrow">
