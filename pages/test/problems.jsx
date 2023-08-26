@@ -26,7 +26,7 @@ const codingproblems = () => {
             <Button className="primary">Click me</Button>
           </div>
 
-          <Dropdown />
+          <Dropdown options={["Hello!", "¡Hola!", "Bon jour!"]} onChange={el => console.log(el)}/>
           <RoundButton>Click me</RoundButton>
           <Input placeholder="Search a new component" />
           <Label>Label</Label>

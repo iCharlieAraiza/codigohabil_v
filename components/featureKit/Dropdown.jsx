@@ -1,7 +1,4 @@
 import React, { useState, useRef } from "react";
-import Image from "next/image";
-import AddIcon from "./svg/add.svg";
-
 import styled from "styled-components";
 
 import useClickOutside from "./hooks/useClickOutside";
@@ -12,19 +9,19 @@ import useClickOutside from "./hooks/useClickOutside";
   - onChange: Function to handle the change
 */
 
-const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
+//const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
 
-const Dropdown = () => {
+const Dropdown = ({options, onChange}) => {
   const [open, setOpen] = useState(false);
 
   const [elementList, setElementList] = useState(
-    options.map((option) => ({
+    options?.map((option) => ({
       id: Date.now()-Math.random()+ "select",
       text: option,
     }))
   );
 
-  const [select, setSelect] = useState(elementList[0]);
+  const [select, setSelect] = useState(elementList && elementList[0]);
 
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
@@ -38,6 +35,7 @@ const Dropdown = () => {
   const handleOptionClick = (option) => {
     setSelect(option);
     setOpen(false);
+    onChange(option.text);
   };
 
   return (
@@ -69,7 +67,7 @@ const Dropdown = () => {
       <MenuContainer ref={menuRef}>
         {open && (
           <DropdownMenu>
-            {elementList.map((option) => (
+            {elementList?.map((option) => (
               <li key={option.id} onClick={() => handleOptionClick(option)} className={option.id == select.id ? 'selected' : ''}>
                 {option.id == select.id ? <CheckIcon /> : ''}
                 {option.text}
@@ -105,8 +103,6 @@ function CheckIcon() {
 const DropdownItem = styled.div`
   cursor: pointer;
   font-size: 14px;
-  display: flex;
-  align-items: center;
   border-radius: 5px;
   font-weight: 700;
   border: 1px solid #dedede;
@@ -116,6 +112,7 @@ const DropdownItem = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
+  user-select: none; 
   svg {
     color: var(--font-color);
   }
@@ -153,6 +150,7 @@ const DropdownMenu = styled.ul`
     width: 12px;
     margin-right: 5px;
     margin-left: 8px;
+  }
 `;
 
 const MenuContainer = styled.div`
