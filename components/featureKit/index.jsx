@@ -15,7 +15,12 @@ export const Button = styled.button`
     padding: 8px 20px;
     background-color: transparent;
     color: var(----font-color);
+    &.primary {
+        background-color: #4a3b3b86;
+        color: white;
+    }
 `
+
 
 export const RoundButton = styled(Button)`
     border-radius: 17px;

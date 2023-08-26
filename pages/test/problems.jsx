@@ -17,10 +17,15 @@ const codingproblems = () => {
     <>
       <Header />
       <section style={{ "margin-top": "3rem" }}>
-        <BannerCategory props={{ title: "Problemas de código" }} />
+        <BannerCategory props={{  title: "Problemas de código", logo: "https://cdn-icons-png.flaticon.com/512/2889/2889363.png"}} />
 
         <section className="container-narrow">
           <Button>Click me</Button>
+          <div>
+            <Button>Click me</Button>
+            <Button className="primary">Click me</Button>
+          </div>
+
           <Dropdown />
           <RoundButton>Click me</RoundButton>
           <Input placeholder="Search a new component" />
