@@ -7,12 +7,9 @@ require('prismjs/components/prism-jsx.min.js');
 require('prismjs/components/prism-css.min.js');
 require('prismjs/components/prism-scss.min.js');
 
-
 import moment from "moment";
 
-
 import { AiOutlineClockCircle } from 'react-icons/ai'
-
 
 const PostSection = ({post}) => {
     const catEmoji = null//post.categories.nodes[0]?.categoryInfo?.emoji

@@ -22,7 +22,7 @@ import Cheatsheet from "../components/v2/Cheatsheet";
 const Post = ({ post }) => {
   const toc = [];
 
-  console.log("Post object", post);
+  //console.log("Post object", post);
 
   useEffect(() => {
     const onScroll = () => {

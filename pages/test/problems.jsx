@@ -11,14 +11,20 @@ import {
   Checkbox,
 } from "../../components/featureKit";
 import BannerCategory from "../../components/BannerCategory";
+import { TableProblems } from "../../components/TableProblems";
 
 const codingproblems = () => {
   return (
     <>
       <Header />
       <section style={{ "margin-top": "3rem" }}>
-        <BannerCategory props={{  title: "Problemas de código", logo: "https://cdn-icons-png.flaticon.com/512/2889/2889363.png"}} />
-
+        <BannerCategory
+          props={{
+            title: "Problemas de código",
+            logo: "https://cdn-icons-png.flaticon.com/512/2889/2889363.png",
+          }}
+        />
+        {/*
         <section className="container-narrow">
           <Button>Click me</Button>
           <div>
@@ -52,6 +58,12 @@ const codingproblems = () => {
             </tr>
           </Table>
         </section>
+        */}
+        {/* <section className="container-narrow">  */}
+
+        <div className="container-narrow">
+          <TableProblems />
+        </div>
       </section>
     </>
   );

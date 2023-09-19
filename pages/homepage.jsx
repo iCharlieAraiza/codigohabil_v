@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Hero, About, Topics} from '../components/v2'
 
 export default function homepage ({props}) {
-  console.log(props)
+  //console.log(props)
   return (
     <>
         <Navbar />
