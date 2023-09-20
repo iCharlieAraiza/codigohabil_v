@@ -123,7 +123,7 @@ export const HeroContainer = styled.section`
   }
   .info-container {
     min-width: 300px;
-    max-width: 520px;
+    max-width: 540px;
   }
 
   .img-container {
@@ -147,6 +147,7 @@ export const HeroContainer = styled.section`
 export const HeaderH1 = styled.h1`
   font-size: 32px;
   margin-top: 0;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -154,7 +155,7 @@ export const HeaderH1 = styled.h1`
   animation: fadeInDown 1s forwards;
   //letter-spacing: -0.9px;
 
-  font-family:"Helvetica neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   @media (min-width: 768px) {
@@ -218,9 +219,12 @@ export const FeaturedLabel = styled.span`
 export const DisplayParagraph = styled.p`
   font-size: 18px;
   color: inherit;
-  font-weight: 400;
+  letter-spacing: -0.24px;
+  font-family: "Soehne", system-ui, -apple-system, Helvetica Neue, Arial,
+    sans-serif;
+  font-weight: 300;
   @media (min-width: 800px) {
-    font-size: 22px;
+    font-size: 26px;
   }
 `;
 
