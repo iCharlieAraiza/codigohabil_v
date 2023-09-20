@@ -69,7 +69,7 @@ export const Table = styled.table`
 
   tr {
     &:first-child {
-      border: 1px solid #c8c8c8;
+      //border: 1px solid #c8c8c8;
     }
   }
 
