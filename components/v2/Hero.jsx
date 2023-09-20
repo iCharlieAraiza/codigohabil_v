@@ -17,7 +17,7 @@ const Hero = () => {
       <Container className="d-flex">
         <div className="info-container">
           <HeaderH1>
-            Aprende a programar y desarrollo web 
+            Aprende programación y desarrollo web 
             <FeaturedLabel>fácil</FeaturedLabel> y {" "}
             <FeaturedLabel>sin costo</FeaturedLabel>
           </HeaderH1>
