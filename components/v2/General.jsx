@@ -152,7 +152,11 @@ export const HeaderH1 = styled.h1`
   flex-wrap: wrap;
   justify-content: center;
   animation: fadeInDown 1s forwards;
-  letter-spacing: -0.9px;
+  //letter-spacing: -0.9px;
+
+  font-family:"Helvetica neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
   @media (min-width: 768px) {
     font-size: 50px;
     justify-content: flex-start;

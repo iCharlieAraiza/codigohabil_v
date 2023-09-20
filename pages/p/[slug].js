@@ -5,8 +5,7 @@ import {  GET_ALL_PROBLEM_LIST, GET_PROBLEM_BY_SLUG } from '../../lib/wordpress/
 
 const ProblemPost = ({ params }) => {
   const{data} = params
-  console.log("ProblemPost", params.data.problem);
-
+  
   if(!params.data.problem) return null
 
   return (
@@ -34,10 +33,7 @@ export async function getStaticProps({params}) {
     idType: 'SLUG'
   }
 
-  const data = await fetcher(GET_PROBLEM_BY_SLUG, { variables })
-
-  console.log("ProblemPost", data);
-  
+  const data = await fetcher(GET_PROBLEM_BY_SLUG, { variables })  
   
   if (!data.data.problem) {
     return {
