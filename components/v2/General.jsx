@@ -152,7 +152,7 @@ export const HeaderH1 = styled.h1`
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  animation: fadeInDown 1s forwards;
+  animation: fadeInDown 0.5s forwards;
   //letter-spacing: -0.9px;
 
   font-family: "Helvetica neue", Helvetica, Arial, sans-serif;
@@ -218,7 +218,7 @@ export const FeaturedLabel = styled.span`
 
 export const DisplayParagraph = styled.p`
   font-size: 18px;
-  color: inherit;
+  color: white;
   letter-spacing: -0.24px;
   font-family: system-ui, -apple-system, Helvetica Neue, Arial,
     sans-serif;
