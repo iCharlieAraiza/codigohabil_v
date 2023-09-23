@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { DarkModeBtn, Container, Nav, NavList, MenuBtn } from "./General";
@@ -7,7 +7,6 @@ import useDarkMode from 'use-dark-mode'
 import { BsFillSunFill } from 'react-icons/bs';
 import { FaRegMoon } from 'react-icons/fa';
 import Login from "../auth/Login";
-
 
 const Navbar = () => {
   const darkMode = useDarkMode()

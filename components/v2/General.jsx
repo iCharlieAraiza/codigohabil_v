@@ -27,7 +27,7 @@ export const Nav = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  color: #fff;
+  //color: #fff;
   padding: 10px 0;
   z-index: 100;
   transition: all 0.3s ease-in-out;
@@ -123,20 +123,20 @@ export const HeroContainer = styled.section`
   }
   .info-container {
     min-width: 300px;
-    max-width: 540px;
   }
 
   .img-container {
     //min-width: 210px;
     margin: 0 auto;
     max-width: 200px;
-    box-shadow: 0px 0px 30px #316473;
+    //box-shadow: 0px 0px 30px #316473;
     border-radius: 28px;
-    animation: fadeInUp 3s;
+    animation: fadeInUp 2s;
   }
   @media (min-width: 768px) {
     .info-container {
       text-align: left;
+      max-width: 540px;
     }
     .img-container {
       margin: 0;
@@ -220,7 +220,7 @@ export const DisplayParagraph = styled.p`
   font-size: 18px;
   color: inherit;
   letter-spacing: -0.24px;
-  font-family: "Soehne", system-ui, -apple-system, Helvetica Neue, Arial,
+  font-family: system-ui, -apple-system, Helvetica Neue, Arial,
     sans-serif;
   font-weight: 300;
   @media (min-width: 800px) {
