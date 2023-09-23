@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import HeroBg from "../../assets/hero-bg.png";
-
+import HeroBgWebp from "../../assets/hero-bg.webp";
 export const ContainerFluid = styled.div`
   width: 100%;
   padding: 0 1rem;
@@ -108,7 +108,7 @@ export const DarkModeBtn = styled.button`
 `;
 
 export const HeroContainer = styled.section`
-  background-image: url(${HeroBg.src});
+  background-image: url(${HeroBgWebp.src});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
