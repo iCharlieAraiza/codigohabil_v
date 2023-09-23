@@ -11,7 +11,7 @@ import Link from "next/link";
 import { AiOutlineUnorderedList } from "react-icons/ai";
 import Cheatsheet from "../components/v2/Cheatsheet";
 
-import Navbar from "../components/v2/Navbar.jsx";
+import {NavbarFixed} from "../components/v2/Navbar.jsx";
 /*
 
     Todo: 
@@ -31,7 +31,6 @@ const Post = ({ post }) => {
       toc.forEach((el) => {
         if (el.position != null) {
           if (scrolly > el.position.start && scrolly < el.position.end) {
-            console.log(el.title);
           }
         }
       });
@@ -111,7 +110,7 @@ const Post = ({ post }) => {
   if (post.typeOfPost?.typeOfPost === "Cheatsheet") {
     return (
       <Main>
-        <Navbar />
+        <NavbarFixed />
         <Cheatsheet post={post} />
       </Main>
     );
@@ -119,7 +118,7 @@ const Post = ({ post }) => {
 
   return (
     <Main>
-      <Header />
+      <NavbarFixed />
       <Sidebar>
         {tocHTML.length > 0 ? (
           <TOC>
