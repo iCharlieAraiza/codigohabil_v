@@ -7,13 +7,9 @@ import {
   DisplayParagraph,
 } from "./General";
 
-import Image from "next/image";
-
-import HeroImg from "../../assets/hero-img.svg";
-
 const Hero = () => {
   return (
-    <HeroContainer>
+    <HeroContainer className="hero-container">
       <Container className="d-flex">
         <div className="info-container">
           <HeaderH1>

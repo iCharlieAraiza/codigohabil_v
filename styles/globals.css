@@ -140,6 +140,15 @@ pre {
   z-index: -1;
 }
 
+.hero-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
 
 @media (min-width:320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
