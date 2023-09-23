@@ -8,9 +8,10 @@ import rehypeStringify from "rehype-stringify/lib";
 import { visit } from "unist-util-visit";
 import parameterize from "parameterize";
 import Link from "next/link";
-import Script from "next/script";
 import { AiOutlineUnorderedList } from "react-icons/ai";
 import Cheatsheet from "../components/v2/Cheatsheet";
+
+import Navbar from "../components/v2/Navbar.jsx";
 /*
 
     Todo: 
@@ -110,7 +111,7 @@ const Post = ({ post }) => {
   if (post.typeOfPost?.typeOfPost === "Cheatsheet") {
     return (
       <Main>
-        <Header />
+        <Navbar />
         <Cheatsheet post={post} />
       </Main>
     );

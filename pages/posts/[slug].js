@@ -16,7 +16,7 @@ const post = ({ postData }) => {
     <>
         <Head>
           <title>{ post.seo.title }</title>
-          <meta name="description" content={ post.seo.metaDesc } />
+          <meta name="description" content={ post.seo.opengraphDescription } />
           <link rel="icon" href="/favicon.ico" />
           <link rel="stylesheet" href="https://assets.codigohabil.com/css/prism.css"></link>
       </Head>

@@ -149,6 +149,13 @@ pre {
   text-align: center;
 }
 
+.fix__navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 100;
+}
 
 @media (min-width:320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */

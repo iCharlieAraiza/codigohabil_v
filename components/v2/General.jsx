@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import HeroBg from "../../assets/hero-bg.png";
 import HeroBgWebp from "../../assets/hero-bg.webp";
 export const ContainerFluid = styled.div`
   width: 100%;
@@ -27,10 +26,8 @@ export const Nav = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  //color: #fff;
   padding: 10px 0;
   z-index: 100;
-  //transition: all 0.3s ease-in-out;
   @media (min-width: 1400px) {
     .nav-width {
       max-width: 1450px;
