@@ -6,12 +6,11 @@ import {
   SearchContainer,
   BtnLabel,
   ResultsContainer,
-  ResultItem,
 } from "./General";
 import { AiOutlineCode, AiOutlineSearch } from "react-icons/ai";
-import Image from "next/image";
-import Link from "next/link";
+
 import Card from "./Card";
+import {getCatSvg} from "../../utils/getCategorySvg";
 
 const Topics = ({ categories }) => {
   const [search, setSearch] = useState("");
@@ -61,6 +60,7 @@ const Topics = ({ categories }) => {
                   slug={el.slug}
                   id={el.id}
                   logo={el.categoryInfo.logo}
+                  svg={getCatSvg(el.slug)}
                   name={el.name}
                 />
               );

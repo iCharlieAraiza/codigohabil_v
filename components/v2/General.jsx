@@ -334,6 +334,11 @@ export const ResultItem = styled.li`
   a {
     display: flex;
   }
+
+  svg {
+    max-width: 50px;
+    max-height: 65px;
+  }
   img {
     width: 100%;
     max-width: 300px;
