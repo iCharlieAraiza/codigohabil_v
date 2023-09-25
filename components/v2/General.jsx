@@ -34,7 +34,7 @@ export const Nav = styled.nav`
     }
   }
 
-  &.scrolled, &.fixed {
+  &.scrolled, &.fixed__statix-navbar {
     background-color: #394960;
     padding: 5px 0;
     border-bottom: 1px solid #727272;

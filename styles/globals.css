@@ -141,6 +141,7 @@ pre {
 }
 
 .hero-container {
+  background-color: #39495f;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -155,6 +156,12 @@ pre {
   width: 100%;
   padding: 10px 0;
   z-index: 100;
+}
+
+.fixed__statix-navbar {
+  background-color: #394960;
+  padding: 5px 0;
+  border-bottom: 1px solid #727272;
 }
 
 @media (min-width:320px) {

@@ -54,7 +54,7 @@ const Navbar = () => {
 export const NavbarFixed = () => {
   const darkMode = useDarkMode()
   return (
-    <Nav className="fixed">
+    <Nav className="fixed__statix-navbar">
       <Container className="d-flex nav-width">
         <Link href="/">
           <a className="logo-container">
