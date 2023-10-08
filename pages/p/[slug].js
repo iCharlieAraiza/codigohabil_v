@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import fetcher from "../../lib/fetcher";
 import {
   GET_ALL_PROBLEM_LIST,
@@ -10,8 +10,19 @@ import Head from "next/head";
 import { NavbarFixed } from "../../components/v2/Navbar.jsx";
 import ProblemLayout from "../../components/Layouts/ProblemLayout";
 
+const prism = require("prismjs")
+require('prismjs/components/prism-java.min.js');
+require('prismjs/components/prism-javascript.min.js');
+require('prismjs/components/prism-jsx.min.js');
+require('prismjs/components/prism-css.min.js');
+require('prismjs/components/prism-scss.min.js');
+
 const ProblemPost = ({ params }) => {
   const { data } = params;
+
+  useEffect(() => {
+    prism.highlightAll();
+  }, []);
 
   if (!params.data.problem) return null;
 

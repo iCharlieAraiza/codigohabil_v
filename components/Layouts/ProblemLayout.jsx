@@ -45,6 +45,14 @@ const Layout = styled.article`
     padding: 1rem;
   }
 
+  h1 {
+    &::before {
+      content: "📄";
+      font-weight: 700;
+      margin-right: 10px;
+    }
+  }
+
   code {
     overflow: scroll;
   }
@@ -56,7 +64,9 @@ const Layout = styled.article`
       height: calc(100vh - 40px);
       overflow: scroll;
     }
-
+    h1 {
+      font-size: 30px;
+    }
   }
 `
 
