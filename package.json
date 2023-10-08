@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.5.7",
+    "@monaco-editor/react": "^4.6.0",
     "graphql": "^16.2.0",
     "mdx-utils": "^0.2.0",
     "moment": "^2.29.1",
