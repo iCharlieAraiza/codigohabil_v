@@ -5,6 +5,8 @@ import {
   GET_PROBLEM_BY_SLUG,
 } from "../../lib/wordpress/api";
 
+import Head from "next/head";
+
 import { NavbarFixed } from "../../components/v2/Navbar.jsx";
 import ProblemLayout from "../../components/Layouts/ProblemLayout";
 
@@ -15,6 +17,12 @@ const ProblemPost = ({ params }) => {
 
   return (
     <>
+      <Head>
+          <title>{ data.problem.seo.opengraphTitle }</title>
+          <meta name="description" content={ data.problem.seo.opengraphDescription } />
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="stylesheet" href="https://assets.codigohabil.com/css/prism.css"></link>
+      </Head>
       <NavbarFixed />
       <ProblemLayout>
         <h1>{data.problem.title}</h1>
